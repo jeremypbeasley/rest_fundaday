@@ -74,8 +74,8 @@ $("input[data-type='date']").datepicker({
   },
 });
 
-changeMaterialHeader(headerHtml, moment());
-$('#date-input').datepicker('show');
+// changeMaterialHeader(headerHtml, moment());
+// $('#date-input').datepicker('show');
 
 // LABEL ANIMATIONS
 

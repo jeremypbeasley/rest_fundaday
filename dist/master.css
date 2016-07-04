@@ -3158,83 +3158,74 @@ body {
   color: #fff;
   border-color: #fff;
 }
-
 .DateLabel {
   width: 100%;
   display: block;
   margin-bottom: 10px;
-  margin-top: 10px;
+  font-family: CircularStdBook;
+  margin-top: 30px;
 }
-
 #date-input {
   width: 100%;
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid #000;
   outline: none;
   font-size: 15px;
   border-radius: 0px;
-  box-shadow: inset 0px 0px 0px 0px red;
+  box-shadow: inset 0px 0px 0px 0px #f00;
   -webkit-appearance: none;
+  font-family: CircularStdBook;
 }
-
 .ui-datepicker-header {
   cursor: pointer;
 }
-
 .ui-datepicker-next-hover.ui-state-hover {
-  background-color: black !important;
+  background-color: #000 !important;
   right: 2px;
   top: 2px;
   opacity: 0.5;
 }
-
 .ui-datepicker-prev-hover.ui-state-hover {
-  background-color: black !important;
+  background-color: #000 !important;
   left: 2px;
   top: 2px;
   opacity: 0.5;
 }
-
 .ui-datepicker,
 .ui-datepicker-material-header {
-  background: red;
-  font-family: CircularStd-Book, Roboto, Arial;
+  background: #f00;
+  font-family: CircularStdBook, Roboto, Arial;
 }
-
 .ui-icon-circle-triangle-w {
   border-radius: 100%;
   background-image: url("http://fund-a-day.iwantrest.com/_img/ic_keyboard_arrow_left_white_24px.svg") !important;
   background-size: 150%;
   background-position: center center;
 }
-
 .ui-icon-circle-triangle-e {
   border-radius: 100%;
   background-image: url("http://fund-a-day.iwantrest.com/_img/ic_keyboard_arrow_right_white_24px.svg") !important;
   background-size: 150%;
   background-position: center center;
 }
-
 .ui-widget-content .ui-state-disabled {
   opacity: 1;
-  color: #00AF66;
-  color: black;
+  color: #00af66;
+  color: #000;
 }
-
 .ui-widget-content .ui-state-disabled span {
-  color: #00AF66;
-  color: black;
+  color: #00af66;
+  color: #000;
   background-image: url("http://fund-a-day.iwantrest.com/_img/ic_check_white_24px.svg");
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center center;
   text-indent: -999999px;
 }
-
 .ui-widget-content .ui-state-disabled span::after {
   width: 10px;
   height: 10px;
-  color: #00AF66;
+  color: #00af66;
   background-image: url("http://fund-a-day.iwantrest.com/_img/ic_check_white_24px.svg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -3245,14 +3236,12 @@ body {
   left: 9px;
   top: -3px;
 }
-
 .ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled {
   text-decoration: none;
 }
-
 .ui-datepicker-material-header {
   display: block;
-  color: white;
+  color: #fff;
   text-align: center;
   width: 315px;
 }
@@ -3278,30 +3267,26 @@ body {
 .ui-datepicker-material-header .ui-datepicker-material-date .ui-datepicker-material-year {
   font-size: 1.8rem;
   font-weight: 200;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255,255,255,0.4);
 }
-
 .ui-datepicker {
   padding: 0;
   border: none;
   width: 315px;
-  background: black;
+  background: #000;
 }
-
 .ui-corner-all {
   border-radius: 0;
 }
-
 .ui-widget-header {
   border: 0;
 }
-
 .ui-datepicker-header {
   text-align: center;
-  background: black;
+  background: #000;
   padding-bottom: 15px;
   font-weight: 300;
-  color: white;
+  color: #fff;
 }
 .ui-datepicker-header .ui-datepicker-prev,
 .ui-datepicker-header .ui-datepicker-next,
@@ -3310,14 +3295,12 @@ body {
   outline: none;
   margin: 5px;
 }
-
 .ui-datepicker-prev.ui-state-hover,
 .ui-datepicker-next.ui-state-hover {
   border: none;
   outline: none;
   background: #b4cbe5;
 }
-
 .ui-datepicker-calendar .ui-state-default {
   background: none;
   border: none;
@@ -3327,23 +3310,22 @@ body {
   line-height: 36px;
 }
 .ui-datepicker-calendar .ui-state-highlight {
-  color: white;
+  color: #fff;
 }
 .ui-datepicker-calendar .ui-state-active {
   border-radius: 50%;
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #000;
 }
 .ui-datepicker-calendar thead th {
-  color: white;
+  color: #fff;
   font-weight: 200;
 }
-
 .ui-datepicker-buttonpane {
   border: none;
 }
 .ui-datepicker-buttonpane .ui-state-default {
-  background: black;
+  background: #000;
   border: none;
 }
 .ui-datepicker-buttonpane .ui-datepicker-current {
@@ -3351,8 +3333,8 @@ body {
 }
 .ui-datepicker-buttonpane .ui-datepicker-close,
 .ui-datepicker-buttonpane .ui-datepicker-current {
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
   text-transform: uppercase;
   border: none;
   opacity: 1;
@@ -3362,19 +3344,17 @@ body {
 }
 .ui-datepicker-buttonpane .ui-datepicker-close:hover,
 .ui-datepicker-buttonpane .ui-datepicker-current:hover {
-  background: black;
+  background: #000;
 }
 .ui-datepicker-buttonpane .ui-datepicker-close.ui-state-hover,
 .ui-datepicker-buttonpane .ui-datepicker-current.ui-state-hover {
-  background: black !important;
+  background: #000 !important;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 button,
 input,
 select,
@@ -3385,52 +3365,46 @@ textarea {
   border: 0;
   outline: 0;
 }
-
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-
 input[type='text'] {
   width: 100%;
   padding: 30px 10px 10px 60px;
   font-size: 15px;
-  color: black;
+  color: #000;
   background-color: #fff;
   max-width: 315px;
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 0px;
   -webkit-appearance: none;
 }
-
 .FormRow {
   display: block;
   position: relative;
   margin: 0 0 15px 0;
 }
-
 .FormRow input {
-  transition: .1s all linear;
+  transition: 0.1s all linear;
+  font-family: CircularStdBook;
 }
-
 .FormRow label {
   position: absolute;
+  font-family: CircularStdBook;
   top: 25px;
   left: 15px;
   font-size: 15px;
-  color: black;
-  transition: .1s all linear;
+  color: #000;
+  transition: 0.1s all linear;
   cursor: text;
 }
-
 .FormRow.active input {
   padding-left: 15px;
 }
-
 .FormRow.active label {
   top: 11px;
   font-size: 11px;
-  opacity: .4;
+  opacity: 0.4;
 }
-
