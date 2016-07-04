@@ -22,6 +22,8 @@ module.exports = function(grunt) {
       dist: {
         src: [
           'bower_components/jquery/dist/jquery.js',
+          'src/_scripts/jquery-ui.min.js',
+          'src/_scripts/moment.js',
           'src/_scripts/main.js'
         ], 
         dest: 'dist/master.js',
@@ -29,7 +31,7 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['src/_scripts/*.js', 'Gruntfile.js', 'src/_styles/*.styl'],
+        files: ['src/_scripts/*.js', 'Gruntfile.js', 'src/_styles/*.styl', 'src/_styles/*.css'],
         tasks: ['concat', 'stylus'],
         options: {
           spawn: false

@@ -12,7 +12,6 @@ body
     overflow-y auto
     overflow-x hidden
     margin 0
-    background #f2f2f2
     padding-bottom 10vw
   
 .hidden
@@ -20,5 +19,86 @@ body
 	opacity 0
  
  
+.logo
+  width: 5rem
+  height: 2.5rem
+  background: url(_img/rest_logo_outline.svg) no-repeat
+  //background-image: url("http://identity.iwantrest.com/Logos/REST_LogoSecondary-01.png")
+  display: block
+  background-size: 100%
+  z-index: 9996
+  transition: none
+  float: left
+  text-indent: -9999rem
+  cursor pointer
+  position: absolute;
+  top: 11vw;
+  left: 11vw;
+  
+.column {
+  position: relative;
+}
 
+.FundADay_Intro .column {
+  min-height: calc(80vh - 5.5vw);
+  margin-top: 5.5vw;
+}
 
+.FundADay_FinancialCase {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("https://iwantrest.com/_img/blog_donatebg_desktop.jpg")
+}
+
+.FundADay_FinancialCase .column {
+  min-height: calc(100vh - 5.5vw);
+}
+
+.FundADay_Calendar {
+  width: 100%; 
+  display: block;
+  margin: 5vw;
+}
+
+.FundADay_CalendarMonth {
+  width: 12%; 
+  display: block;
+  float: left;
+  margin: 1.5vw;
+}
+
+.FundADay_CalendarMonth img {
+  width: 100%;
+}
+
+.CenterBlock {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.NegativeBlock {
+  color: white
+}
+
+.NegativeBlock h1, .NegativeBlock h2, .NegativeBlock h3, .NegativeBlock p, .NegativeBlock a {
+  color: white;
+  border-color: white
+}
+
+// .BigPhoto {
+//   position: absolute;
+//   top: 0px;
+//   left: 50%; 
+//   height: 100vh;
+//   width: 50vw;
+//   background-size: cover;
+//   background-position: center center
+// }
+
+// .BigPhoto.Intro {
+//   width: 30vw;
+//   left: 70vw;
+//   background-image: url("_img/introimg.jpg")
+// }
