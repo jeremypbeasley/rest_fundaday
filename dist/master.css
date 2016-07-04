@@ -3116,8 +3116,8 @@ body {
   position: relative;
 }
 .FundADay_Intro .column {
-  min-height: calc(80vh - 5.5vw);
-  margin-top: 5.5vw;
+  min-height: calc(60vh - 5.5vw);
+  margin-top: 25vw;
 }
 .FundADay_FinancialCase {
   height: 100vh;
@@ -3130,11 +3130,19 @@ body {
 }
 .FundADay_Calendar {
   width: 100%;
-  margin: 5vw;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .FundADay_CalendarScroll {
-  width: 1300vw;
+  width: 825vw;
+  margin: 7.5vw;
+}
+.FundADay_Calendar::-webkit-scrollbar,
+.FundADay_CalendarScroll::-webkit-scrollbar {
+  display: none;
+  height: 0px;
+  width: 0px;
+  opacity: 0;
 }
 @media (min-width: 62em) {
   .FundADay_CalendarScroll {
@@ -3176,6 +3184,16 @@ body {
 .NegativeBlock a {
   color: #fff;
   border-color: #fff;
+}
+.FundADay_FormSubmit {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-family: CircularStdBook, CircularStdBold, sans-serif;
+  border: none;
+  border-radius: 0px;
+  padding: 1rem;
+  text-align: center;
 }
 .DateLabel {
   width: 100%;
@@ -3291,7 +3309,7 @@ body {
 .ui-datepicker {
   padding: 0;
   border: none;
-  width: 315px;
+  width: 320px;
   background: #000;
 }
 .ui-corner-all {
@@ -3395,10 +3413,13 @@ input[type='text'] {
   font-size: 15px;
   color: #000;
   background-color: #fff;
-  max-width: 315px;
+  max-width: 320px;
   border: 1px solid #000;
   border-radius: 0px;
   -webkit-appearance: none;
+}
+form {
+  margin-bottom: 100vh;
 }
 .FormRow {
   display: block;
@@ -3412,7 +3433,7 @@ input[type='text'] {
 .FormRow label {
   position: absolute;
   font-family: CircularStdBook;
-  top: 25px;
+  top: 20px;
   left: 15px;
   font-size: 15px;
   color: #000;

@@ -1,3 +1,17 @@
+// $("#expyear").on("focus", function() {
+//   console.log("r4t56");
+//   // $('html, body').animate({
+//   //   scrollTop: $("#date-input").offset().top
+//   // }, 2000);
+// });
+
+$("#date-input").focus(function() {
+  console.log("r4t56");
+  $('html, body').animate({
+    scrollTop: $("#date-input").offset().top -50}, 200);
+});
+
+
 var fundedDates = [
   "2016-06-14",
   "2016-06-15",
@@ -63,6 +77,7 @@ $.datepicker._selectDate = function(id, dateStr) {
 
 $("input[data-type='date']").on("focus", function() {
  	$(".ui-datepicker").prepend(headerHtml);
+  $(window).scrollTop($('#date-input').offset(0));
 });
 
 $("input[data-type='date']").datepicker({
@@ -73,6 +88,9 @@ $("input[data-type='date']").datepicker({
     changeMaterialHeader(headerHtml,moment(date, 'MM/DD/YYYY'));
   },
 });
+
+
+
 
 // changeMaterialHeader(headerHtml, moment());
 // $('#date-input').datepicker('show');

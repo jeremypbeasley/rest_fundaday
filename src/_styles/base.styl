@@ -40,8 +40,8 @@ body
 }
 
 .FundADay_Intro .column {
-  min-height: calc(80vh - 5.5vw);
-  margin-top: 5.5vw;
+  min-height: calc(60vh - 5.5vw);
+  margin-top: 25vw;
 }
 
 .FundADay_FinancialCase {
@@ -57,12 +57,20 @@ body
 
 .FundADay_Calendar {
   width: 100%; 
-  margin: 5vw;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .FundADay_CalendarScroll {
-  width: 1300vw; 
+  width: 825vw; 
+  margin: 7.5vw;
+}
+
+.FundADay_Calendar::-webkit-scrollbar, .FundADay_CalendarScroll::-webkit-scrollbar {
+  display: none;
+  height: 0px;
+  width: 0px;
+  opacity: 0;
 }
 
 @media laptop {
@@ -107,6 +115,17 @@ body
 .NegativeBlock h1, .NegativeBlock h2, .NegativeBlock h3, .NegativeBlock p, .NegativeBlock a {
   color: white;
   border-color: white
+}
+
+.FundADay_FormSubmit {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-family: CircularStdBook, CircularStdBold, sans-serif;
+  border: none;
+  border-radius: 0px;
+  padding: 1rem;
+  text-align: center;
 }
 
 // .BigPhoto {
