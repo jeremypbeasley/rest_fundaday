@@ -3130,14 +3130,33 @@ body {
 }
 .FundADay_Calendar {
   width: 100%;
-  display: block;
   margin: 5vw;
+  overflow: scroll;
+}
+.FundADay_CalendarScroll {
+  width: 1300vw;
+}
+@media (min-width: 62em) {
+  .FundADay_CalendarScroll {
+    width: 100%;
+  }
+}
+@media (min-width: 62em) {
+  .FundADay_Calendar {
+    width: 100%;
+  }
 }
 .FundADay_CalendarMonth {
-  width: 12%;
-  display: block;
-  float: left;
-  margin: 1.5vw;
+  width: 60vw;
+  display: inline-block;
+  margin: 3.5vw;
+  font-family: CircularStdBook;
+}
+@media (min-width: 62em) {
+  .FundADay_CalendarMonth {
+    width: 12%;
+    margin: 1.5vw;
+  }
 }
 .FundADay_CalendarMonth img {
   width: 100%;
