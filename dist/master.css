@@ -3419,7 +3419,7 @@ input[type='text'] {
   -webkit-appearance: none;
 }
 form {
-  margin-bottom: 100vh;
+  margin-bottom: 60vh;
 }
 .FormRow {
   display: block;

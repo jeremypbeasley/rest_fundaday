@@ -1,14 +1,12 @@
-// $("#expyear").on("focus", function() {
-//   console.log("r4t56");
-//   // $('html, body').animate({
-//   //   scrollTop: $("#date-input").offset().top
-//   // }, 2000);
-// });
 
 $("#date-input").focus(function() {
-  console.log("r4t56");
-  $('html, body').animate({
-    scrollTop: $("#date-input").offset().top -50}, 200);
+  // scroll to top of field on focus
+  $('html, body').animate({ scrollTop: $("#date-input").offset().top -50}, 200);
+  // Match widths of date-picker and above field
+  var dateFieldWidth = $("#date-input").outerWidth()
+  console.log(dateFieldWidth);
+  $('#ui-datepicker-div').css("max-width", dateFieldWidth + "px");
+  $('#ui-datepicker-div').css("min-width", dateFieldWidth + "px");
 });
 
 
@@ -88,9 +86,6 @@ $("input[data-type='date']").datepicker({
     changeMaterialHeader(headerHtml,moment(date, 'MM/DD/YYYY'));
   },
 });
-
-
-
 
 // changeMaterialHeader(headerHtml, moment());
 // $('#date-input').datepicker('show');
