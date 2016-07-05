@@ -5,7 +5,11 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use Cartalyst\Stripe\Exception\CardErrorException;
+use Cartalyst\Stripe\Exception\MissingParameterException;
+
 use Day;
+use Exception;
 use Stripe;
 
 class DayController extends Controller
@@ -105,35 +109,12 @@ class DayController extends Controller
             ]);
 
             // Charge the customer!
-            $response = Stripe::charges()->create([
+            $charge = Stripe::charges()->create([
                 'customer' => $customer['id'],
                 'currency' => $currency,
                 'amount' => $amount,
                 'description' => $description,
             ]);
-
-            // Save the day to the DB
-            $day = new Day;
-            $day->day = $input["day"];
-            $day->donor_name = $input["name"];
-            $day->donor_email = $input["email"];
-            $day->is_anonymous = $input["is_anonymous"];
-            $day->stripe_charge_id = $response['id'];
-            $day->stripe_customer_id = $response['customer'];
-            $day->amount = $response['amount'];
-            $day->source = json_encode($response['source']);
-            $day->description = $response['description'];
-            $day->metadata = json_encode($response['metadata']);
-            $day->captured = $response['captured'];
-            $day->statement_descriptor = $response['statement_descriptor'];
-            $day->save();
-
-            $return_data = [
-                "day"=> $day->day,
-                "name"=> $day->donor_name,
-                "is_anonymous"=> $day->is_anonymous,
-                "email"=> $day->donor_email,
-            ];
 
         } catch (CardErrorException $e) {
             $return_data = [
@@ -143,6 +124,7 @@ class DayController extends Controller
                 'code' => $e->getCode(),
                 'missing_param' => $e->getMissingParameter(),
             ];
+            return response()->json($return_data,400);
         } catch (MissingParameterException $e) {
             $return_data = [
                 'status' => 'failed',
@@ -151,10 +133,48 @@ class DayController extends Controller
                 'code' => $e->getCode(),
                 'missing_param' => $e->getMissingParameter(),
             ];
+            return response()->json($return_data,400);
+        } catch (Exception $e){
+            $return_data = [
+                'status' => 'failed',
+                'error'=>'stripe'
+            ];
+            return response()->json($return_data,400);
         }
 
+        // Save the day to the DB
+        try {
+            $day = new Day;
+            $day->day = $input["day"];
+            $day->donor_name = $input["name"];
+            $day->donor_email = $input["email"];
+            $day->is_anonymous = $input["is_anonymous"];
+            $day->stripe_charge_id = $charge['id'];
+            $day->stripe_customer_id = $charge['customer'];
+            $day->amount = $charge['amount'];
+            $day->source = json_encode($charge['source']);
+            $day->description = $charge['description'];
+            $day->metadata = json_encode($charge['metadata']);
+            $day->captured = $charge['captured'];
+            $day->statement_descriptor = $charge['statement_descriptor'];
+            $day->save();
 
-        return response()->json($return_data);
+            $return_data = [
+                "day"=> $day->day,
+                "name"=> $day->donor_name,
+                "is_anonymous"=> $day->is_anonymous,
+                "email"=> $day->donor_email,
+            ];
+        } catch (Exception $e){
+
+            $return_data = [
+                'status' => 'failed',
+                'error'=>'db',
+            ];
+            return response()->json($return_data,400);
+        }
+
+        return response()->json($return_data,200);
     }
 
 }
