@@ -32,7 +32,7 @@
             <article class="CenterBlock">
                 <h2>For $1,500, you can fund an entire day of our new Emergency Recieving Center.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non justo elementum, ultricies ex at, maximus arcu. Nullam tempor ex non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non justo elementum, ultricies ex at, maximus arcu. Nullam tempor ex non.</p>
-                <p class="underlined"><a href="{{ entry.getUrl() }}">See The Breakdown</a></p>
+                <p class="underlined"><a href="#">See The Breakdown</a></p>
             </article>
         </div>
     </div>
@@ -40,7 +40,7 @@
 <section>
     <div class="row">
         <div class="column col-xs-12 col-md-6 col-md-offset-3">
-            <br><br><br><br><br><br><h2>89 of 365 days have been funded. Will you be #90?</h2>
+            <br><br><br><br><br><br><h2><span id="js-total-days-funded">89</span> of 365 days have been funded. Will you be #<span id="js-total-days-funded-next">90</span>?</h2>
         </div>
     </div>
 </section>
@@ -102,37 +102,36 @@
                 <h2>Fund your day.</h2>
         </div>
         <div class="column col-xs-12">
-            <form>
-            
-
+            <form id="form-donate">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                   <div class="FormRow">
                     <label for="d3">Full Name</label>
-                    <input id="d3" type="text" />
+                    <input id="d3" name="name" type="text" />
                   </div>
                   <div class="FormRow">
                     <label for="d3">Email Address</label>
-                    <input id="d3" type="text" />
+                    <input id="d3" name="email" type="text" />
                   </div>
                   <div class="FormRow">
                     <label for="d3">Credit Card #</label>
-                    <input id="d3" type="text" />
+                    <input id="d3" name="cc_number" type="text" />
                   </div>
                   <div class="FormRow">
                     <label for="d3">Exp. Month</label>
-                    <input id="d3" type="text" />
+                    <input id="d3" name="cc_exp_month" type="text" />
                   </div>
                   <div class="FormRow">
                     <label for="d3">Exp. Year</label>
-                    <input id="d3" type="text" id="expyear" />
+                    <input id="expyear" name="cc_exp_year" type="text" />
                   </div>
                   <div class="FormRow">
                     <label for="d3">CVC</label>
-                    <input id="d3" type="text" />
+                    <input id="d3" name="cvc" type="text" />
                   </div>
                   <div class="">
                     <label class="DateLabel">Choose A Day </label>
-                    <input type="text" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
+                    <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
                   </div>
                   <div class="FormRow">
                   <Br><Br>
@@ -149,6 +148,8 @@
  
     
             </form>
+            <div id="js-form-response"></div>
+
         </div>
     </div>
 </section>
@@ -204,6 +205,7 @@
 </footer> -->
 
   <script src="master.js"></script>
+  <script src="api.js"></script>
 
 
 

@@ -2,6 +2,15 @@
 
 return [
 
+    // REST Fund A Day Specific
+
+    'fund_a_day_product_name'=>'REST: Fund a Day',
+    'fund_a_day_amount'=>1500,
+    'fund_a_day_currency'=>'USD',
+
+
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -207,6 +216,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // App-specific
+        'Day' => App\Day::class,
         // Stripe
         'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,
 

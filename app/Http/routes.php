@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::group(['prefix' => 'api','as'=>'api.','namespace'=>'Api'], function () {
+    Route::get('days', [
+    	'as' => 'days', 'uses' => 'DayController@index'
+	]);
+	Route::post('days', [
+    	'as' => 'days.create', 'uses' => 'DayController@create'
+	]);
+});
