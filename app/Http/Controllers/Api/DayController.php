@@ -66,13 +66,19 @@ class DayController extends Controller
         ]);
 
         $input = $request->all();
+        if(array_key_exists('is_anonymous', $input)){
+            $input['is_anonymous'] = 0;
+        }
+
+        // Convert date format
+        $input['day'] = date('Y-m-d',strtotime($input['day']));
 
         $day_exists = Day::where('day',$input['day'])->count();
         if($day_exists){
             $return_data = [
                 'error'=>'That day was already selected'
             ];
-            return response()->json($return_data);
+            return response()->json($return_data,400);
         }
 
         // Default amount from config

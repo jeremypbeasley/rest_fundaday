@@ -136,10 +136,12 @@
                   <div class="FormRow">
                   <Br><Br>
                     <p>Once you submit, your card will be immediately charged for $1,500.00 USD, funding your chosen day.</p>
+                    <div id="js-form-response"></div>
                   </div>
                   <div class="FormRow">
                     <button class="FundADay_FormSubmit " type="submit">Submit</button>
                   </div>
+                  <input name="is_anonymous" type="hidden" value="0">
                   <!-- <div class="FormRow">
                     <input type="checkbox">
                     <p>I’d like my name not to be displayed publicly on this page.</p>
@@ -148,7 +150,7 @@
  
     
             </form>
-            <div id="js-form-response"></div>
+            
 
         </div>
     </div>
