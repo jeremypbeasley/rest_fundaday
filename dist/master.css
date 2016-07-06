@@ -3116,63 +3116,15 @@ body {
   position: relative;
 }
 .FundADay_Intro .column {
-  min-height: calc(60vh - 5.5vw);
   margin-top: 25vw;
 }
 .FundADay_FinancialCase {
-  height: 100vh;
   background-size: cover;
   background-position: center center;
   background-image: url("https://iwantrest.com/_img/blog_donatebg_desktop.jpg");
 }
-.FundADay_FinancialCase .column {
-  min-height: calc(100vh - 5.5vw);
-}
-.FundADay_Calendar {
-  width: 100%;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-.FundADay_CalendarScroll {
-  width: 825vw;
-  margin: 7.5vw;
-}
-.FundADay_Calendar::-webkit-scrollbar,
-.FundADay_CalendarScroll::-webkit-scrollbar {
-  display: none;
-  height: 0px;
-  width: 0px;
-  opacity: 0;
-}
-@media (min-width: 62em) {
-  .FundADay_CalendarScroll {
-    width: 100%;
-  }
-}
-@media (min-width: 62em) {
-  .FundADay_Calendar {
-    width: 100%;
-  }
-}
-.FundADay_CalendarMonth {
-  width: 60vw;
-  display: inline-block;
-  margin: 3.5vw;
-  font-family: CircularStdBook;
-}
-@media (min-width: 62em) {
-  .FundADay_CalendarMonth {
-    width: 12%;
-    margin: 1.5vw;
-  }
-}
-.FundADay_CalendarMonth img {
-  width: 100%;
-}
 .CenterBlock {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 7.5vw 0;
 }
 .NegativeBlock {
   color: #fff;
@@ -3194,6 +3146,13 @@ body {
   border-radius: 0px;
   padding: 1rem;
   text-align: center;
+}
+.FundADay_BigPhoto {
+  height: 60vw;
+  width: 100vw;
+  background-size: 200%;
+  background-position: left center;
+  background-image: url("_img/blog_donatebg_desktop.jpg");
 }
 .DateLabel {
   width: 100%;
