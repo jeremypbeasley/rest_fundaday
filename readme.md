@@ -13,19 +13,40 @@ Run `npm install` to install the needed packages for Laravel Elixir (gulp)
 If you're using the default .env file - your database creds are:
 
 
-Name: *rest_fundaday-LOCAL* (or equivalent)
+Name: **rest_fundaday-LOCAL** (or equivalent)
 
-Host: *127.0.0.1*
+Host: **127.0.0.1**
 
-Username: *homestead*
+Username: **homestead**
 
-Password: *secret*
+Password: **secret**
 
-Port: *33060*
+Port: **33060**
 
-Leave database field open for now - then connect and click *Add Database...* in the dropdown of the top right - name your db: `restfad`
+Leave database field open for now - then connect and click **Add Database...** in the dropdown of the top right - name your db: `restfad`
 
 Now that you've created your database, you can enter `restfad` on the credentials screen and save it as a favorite.
+
+### Adding a local development URL: restfundaday.app
+
+Open the Homestead.yaml file - it's probably here:
+`~/Homestead/Homestead.yaml`
+
+Add the following under sites
+
+````
+sites:
+    - map: restfundaday.app
+      to: /home/vagrant/Homestead/rest_fundaday/public
+````
+
+Next - carefully edit your `/etc/hosts` file and add this line
+
+`192.168.10.10 restfundaday.app`
+
+Make sure to save. Now back out to your `~/Homestead` folder and run `vagrant provision`
+
+Now you can visit (http://restfundaday.app) in your browser to see the app running.
 
 ### Daily Usage
 
