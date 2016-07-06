@@ -12,10 +12,15 @@ Run `npm install` to install the needed packages for Laravel Elixir (gulp)
 
 If you're using the default .env file - your database creds are:
 
+
 Name: *rest_fundaday-LOCAL* (or equivalent)
+
 Host: *127.0.0.1*
+
 Username: *homestead*
+
 Password: *secret*
+
 Port: *33060*
 
 Leave database field open for now - then connect and click *Add Database...* in the dropdown of the top right - name your db: `restfad`
