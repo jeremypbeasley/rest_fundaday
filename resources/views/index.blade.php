@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
   <meta property="og:site_name" content="REST – Real Escape from the Sex Trade"/>
   <meta property="og:type" content="website"/>
-  <link href="master.css" rel="stylesheet">
+  <link href="/css/master.css" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -206,10 +206,7 @@
   </div>
 </footer> -->
 
-  <script src="master.js"></script>
-  <script src="api.js"></script>
-
-
+  <script src="/js/all.js"></script>
 
 
 </body>
