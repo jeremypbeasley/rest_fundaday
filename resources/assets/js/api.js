@@ -20,6 +20,7 @@ var Api = {
 		var form_data = $form.serialize();
 		$.post('/api/days',form_data,function(response){
 			console.log(response);
+			$('#js-form-response').text('Thank you!').css('color','green');
 		}).fail(function(response){
 			console.log(response);
 			var error = "There was an error";
