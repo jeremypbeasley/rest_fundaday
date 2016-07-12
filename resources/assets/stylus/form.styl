@@ -14,9 +14,11 @@
   outline: none;
   font-size: 15px;
   border-radius: 0px;
-  box-shadow: inset 0px 0px 0px 0px red;
+  //box-shadow: inset 0px 0px 0px 0px red;
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
   -webkit-appearance: none;
   font-family: CircularStdBook;
+  display: none;
 }
 
 .ui-datepicker-header {
@@ -45,14 +47,14 @@
 
 .ui-icon-circle-triangle-w {
   border-radius: 100%;
-  background-image: url("http://fund-a-day.iwantrest.com/_img/ic_keyboard_arrow_left_white_24px.svg") !important;
+  background-image: url("../_img/ic_keyboard_arrow_left_white_24px.svg") !important;
   background-size: 150%;
   background-position: center center;
 }
 
 .ui-icon-circle-triangle-e {
   border-radius: 100%;
-  background-image: url("http://fund-a-day.iwantrest.com/_img/ic_keyboard_arrow_right_white_24px.svg") !important;
+  background-image: url("../_img/ic_keyboard_arrow_right_white_24px.svg") !important;
   background-size: 150%;
   background-position: center center;
 }
@@ -66,7 +68,7 @@
 .ui-widget-content .ui-state-disabled span {
   color: #00AF66;
   color: black;
-  background-image: url("http://fund-a-day.iwantrest.com/_img/ic_check_white_24px.svg");
+  background-image: url("../_img/ic_check_white_24px.svg");
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center center;
@@ -90,6 +92,10 @@
 
 .ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled {
   text-decoration: none;
+}
+
+.ui-datepicker td {
+  padding-bottom: 15px;
 }
 
 .ui-datepicker-material-header {
@@ -123,11 +129,27 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  margin-left: -12px;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  margin-right: -12px;
+}
+
+// .ui-datepicker .ui-datepicker-week-end {
+//   padding-left: 0px !important;
+//   text-align: left;
+// }
+
 .ui-datepicker {
   padding: 0;
   border: none;
-  width: 320px;
+  width: 100%;
   background: black;
+  min-height: 370px;
+  padding-top: 30px;
+  margin-bottom: -10px;
 }
 
 .ui-corner-all {
@@ -138,12 +160,18 @@
   border: 0;
 }
 
+// .ui-datepicker-calendar thead th {
+//   font-size: 13px;
+// }
+
 .ui-datepicker-header {
   text-align: center;
   background: black;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 300;
   color: white;
+  border-bottom: 1px solid hsla(255,100%,100%,.3)
 }
 .ui-datepicker-header .ui-datepicker-prev,
 .ui-datepicker-header .ui-datepicker-next,
@@ -151,6 +179,7 @@
   border: none;
   outline: none;
   margin: 5px;
+  // font-size: 13px;
 }
 
 .ui-datepicker-prev.ui-state-hover,
@@ -160,13 +189,37 @@
   background: #b4cbe5;
 }
 
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  color: sla(255,100%,100%,.3)
+}
+
+.ui-datepicker-calendar .ui-datepicker-unselectable.ui-state-disabled .ui-state-default {
+  border: none; 
+}
+
+.ui-datepicker .ui-datepicker-today .ui-state-highlight {
+  color: #555;
+  background: transparent;
+}
+
+.ui-datepicker .ui-datepicker-today .ui-state-default {
+  color: black;
+  background: white;
+}
+
 .ui-datepicker-calendar .ui-state-default {
   background: none;
   border: none;
   text-align: center;
   height: 33px;
   width: 33px;
-  line-height: 36px;
+  line-height: 25px;
+  //border: 1px solid hsla(255,100%,100%,.3);
+  border-radius: 100%;
+}
+.ui-datepicker td {
+  padding-bottom: 5px;
+  border: 1px solid #555;
 }
 .ui-datepicker-calendar .ui-state-highlight {
   color: white;
@@ -235,19 +288,7 @@ input::-moz-focus-inner {
 }
 
 input[type='text'] {
-  width: 100%;
-  padding: 30px 10px 10px 60px;
-  font-size: 15px;
-  color: black;
-  background-color: #fff;
-  max-width: 320px;
-  border: 1px solid black;
-  border-radius: 0px;
-  -webkit-appearance: none;
-}
 
-form {
-  margin-bottom: 60vh;
 }
 
 .FormRow {
@@ -259,7 +300,15 @@ form {
 .FormRow input {
   transition: .1s all linear;
   font-family: CircularStdBook;
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
 }
+
+// .FormRow input:focus {
+//   position: relative;
+//   top: 3px;
+//   left: 3px;
+//   box-shadow: none !important;
+// }
 
 .FormRow label {
   position: absolute;
@@ -270,14 +319,119 @@ form {
   color: black;
   transition: .1s all linear;
   cursor: text;
+  z-index: 999;
 }
 
 .FormRow.active input {
   padding-left: 15px;
+
 }
 
 .FormRow.active label {
   top: 11px;
   font-size: 11px;
   opacity: .4;
+}
+
+.FundADay_FormSubmit {
+  width: 100%;
+  background: color-red;
+  color: color-white;
+  font-family: CircularStdBook, CircularStdBold, sans-serif;
+  border: none;
+  border-radius: 0px;
+  padding: 1.4rem 1rem;
+  text-align: center;
+}
+
+.FormUICheckbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.FormUICheckbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.FormUICheckbox__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  border: 1px solid #000;
+}
+.FormUICheckbox:hover input ~ .FormUICheckbox__indicator,
+.FormUICheckbox input:focus ~ .FormUICheckbox__indicator {
+  background: #000;
+}
+.FormUICheckbox input:checked ~ .FormUICheckbox__indicator {
+  background: #000;
+}
+.FormUICheckbox:hover input:not([disabled]):checked ~ .FormUICheckbox__indicator,
+.FormUICheckbox input:checked:focus ~ .FormUICheckbox__indicator {
+  background: #000;
+}
+.FormUICheckbox input:disabled ~ .FormUICheckbox__indicator {
+  background: #999;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.FormUICheckbox__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.FormUICheckbox input:checked ~ .FormUICheckbox__indicator:after {
+  display: block;
+}
+.FormUICheckbox--checkbox .FormUICheckbox__indicator:after {
+  left: 5px;
+  top: 2px;
+  width: 2px;
+  height: 6px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  animation: CheckboxBounce 200ms 1 forwards;
+  
+}
+.FormUICheckbox--checkbox input:disabled ~ .FormUICheckbox__indicator:after {
+  border-color: #999;
+}
+
+@keyframes CheckboxBounce {
+  0%   { opacity: 0; transform: scale(.5) rotate(45deg)}
+  90% { opacity: 1; transform:scale(1.4) rotate(45deg) }
+  100% { opacity: 1; transform:scale(1) rotate(45deg)}
+}
+
+// EXP DATE
+
+.FormUIInputText {
+  width: 100%;
+  padding: 30px 10px 10px 60px;
+  font-size: 15px;
+  color: black;
+  background-color: #fff;
+  max-width: 320px;
+  border: 1px solid black;
+  border-radius: 0px;
+  -webkit-appearance: none;
+}
+
+.FormUIExpMonth {
+  width: calc(50% - 11px);
+  margin-right: 17px;
+  display: inline-block;
+}
+
+.FormUIExpYear {
+  width: calc(50% - 11px);
+  display: inline-block;
 }

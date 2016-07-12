@@ -1,18 +1,17 @@
 html
-    min-height 100%
+  min-height 100%
 
 *
-    -webkit-tap-highlight-color rgba(0, 0, 0, 0)  
-    -webkit-font-smoothing antialiased
-    font-smoothing antialiased
-    box-sizing border-box
+  -webkit-tap-highlight-color rgba(0, 0, 0, 0)  
+  -webkit-font-smoothing antialiased
+  font-smoothing antialiased
+  box-sizing border-box
 
 body
-    height 100%
-    overflow-y auto
-    overflow-x hidden
-    margin 0
-    padding-bottom 10vw
+  height 100%
+  overflow-y auto
+  overflow-x hidden
+  margin 0
   
 .hidden
 	display none
@@ -22,8 +21,7 @@ body
 .logo
   width: 5rem
   height: 2.5rem
-  background: url(/_img/rest_logo_outline.svg) no-repeat
-  //background-image: url("http://identity.iwantrest.com/Logos/REST_LogoSecondary-01.png")
+  background: url("../_img/rest_logo_outline.svg") no-repeat
   display: block
   background-size: 100%
   z-index: 9996
@@ -32,114 +30,99 @@ body
   text-indent: -9999rem
   cursor pointer
   position: absolute;
-  top: 11vw;
-  left: 11vw;
+  top: unit4;
+  left: unit4;
   
 .column {
   position: relative;
 }
 
 .FundADay_Intro .column {
-  min-height: calc(60vh - 5.5vw);
   margin-top: 25vw;
 }
 
+.FundADay_Intro h2 {
+  padding: unit11 0;
+}
+
+.FundADay_BigPhoto {
+  height: 80vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: 20% center;
+  background-image: url("../_img/blog_donatebg_desktop.jpg");
+  background-repeat: no-repeat;
+}
+
+.NegativeBlock, .NegativeBlock h1, .NegativeBlock h2, .NegativeBlock h3, .NegativeBlock p, .NegativeBlock a {
+  color: color-white;
+  border-color: color-white
+}
+
+.FundADay_WhatIsERC {
+  padding: unit3 0 unit1 0;
+}
+
 .FundADay_FinancialCase {
-  height: 100vh;
   background-size: cover;
   background-position: center center;
-  background-image: url("https://iwantrest.com/_img/blog_donatebg_desktop.jpg")
+  background-color: color-red;
+  background-image: url("https://iwantrest.com/_img/featphoto_home.jpg");
+  padding: unit3 0 0 0;
+  margin-bottom: -1rem;
 }
 
-.FundADay_FinancialCase .column {
-  min-height: calc(100vh - 5.5vw);
+.FundADay_WillYouBe {
+  background: color-black;
+  padding: unit2 0 0 0;
 }
 
-.FundADay_Calendar {
-  width: 100%; 
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
+.FundADay_BigForm {
+  border-bottom: 1px solid hsla(0,0%,0%,.2);
+  padding-bottom: unit2
 }
 
-.FundADay_CalendarScroll {
-  width: 825vw; 
-  margin: 7.5vw;
-}
-
-.FundADay_Calendar::-webkit-scrollbar, .FundADay_CalendarScroll::-webkit-scrollbar {
-  display: none;
-  height: 0px;
-  width: 0px;
-  opacity: 0;
-}
-
-@media laptop {
- .FundADay_CalendarScroll {
-    width: 100%; 
-  } 
-}
-@media laptop {
-  .FundADay_Calendar {
-    width: 100%;
-  }
-}
-
-.FundADay_CalendarMonth {
-  width: 60vw; 
-  display: inline-block;
-  margin: 3.5vw;
-  font-family: CircularStdBook
-}
-
-@media laptop {
-  .FundADay_CalendarMonth {
-    width: 12%; 
-    margin: 1.5vw;
-  }
-}
-
-.FundADay_CalendarMonth img {
-  width: 100%;
-}
-
-.CenterBlock {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.NegativeBlock {
-  color: white
-}
-
-.NegativeBlock h1, .NegativeBlock h2, .NegativeBlock h3, .NegativeBlock p, .NegativeBlock a {
-  color: white;
-  border-color: white
-}
-
-.FundADay_FormSubmit {
-  width: 100%;
-  background: #000;
-  color: #fff;
-  font-family: CircularStdBook, CircularStdBold, sans-serif;
-  border: none;
-  border-radius: 0px;
-  padding: 1rem;
+.FundADay_Outro {
+  padding: unit10 unit5;
   text-align: center;
 }
 
-// .BigPhoto {
-//   position: absolute;
-//   top: 0px;
-//   left: 50%; 
-//   height: 100vh;
-//   width: 50vw;
-//   background-size: cover;
-//   background-position: center center
-// }
+.FundADay_Outro hr {
+  width: 50%;
+  height: 0px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid hsla(0,0%,0%,.2);
+  margin: unit5 auto;
+}
 
-// .BigPhoto.Intro {
-//   width: 30vw;
-//   left: 70vw;
-//   background-image: url("_img/introimg.jpg")
-// }
+.FundADay_Outro p {
+  text-align: center;
+  padding-top: unit6
+}
+
+.ERCGallery {
+  width: 100%;
+  background: color-black;
+  max-height: 90vw;
+  overflow: hidden;
+}
+.ERCGallery button, .ERCGallery ul {
+  display: none !important;
+}
+.ERCGallery img{
+  max-height: 90vw;
+}
+.ERCGallery img{
+  max-width: 100%;
+  filter: grayscale(100%);
+}
+.ERCGallery .slick-slide {
+  opacity: .4;
+  transition: opacity 200ms ease-out;
+}
+.ERCGallery .slick-current {
+  opacity: 1
+}
+
+
