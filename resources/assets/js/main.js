@@ -105,5 +105,47 @@ $('#date-input').bind('focusin focus', function(e){
 
 $.extend($.datepicker, { _checkOffset: function(inst, offset, isFixed) { return offset } });
 
+// DYNAMIC HEADLINE:
+
+var currentTime = new Date();
+var month = currentTime.getMonth() + 1;
+var day = currentTime.getDate();
+var year = currentTime.getFullYear();
+var today = month + "/" + day + "/" + year;
+// test dates
+// var today = "10/1/2016";
+
+if(dateCheck("1/1/1900","08/1/2016", today))
+  $(".WeNeedYourHelp").html("Next month, we open our Emergency Care Center and we need your help.");
+
+if(dateCheck("8/1/2016","08/31/2016", today))
+  $(".WeNeedYourHelp").html("This month, we opened our Emergency Care Center and we need your help.");
+
+if(dateCheck("8/31/16","9/30/2016", today))
+  $(".WeNeedYourHelp").html("Last month, we opened our Emergency Care Center and we need your help.");
+
+if(dateCheck("9/30/16","1/1/3000", today))
+  $(".WeNeedYourHelp").html("This August, we opened our Emergency Care Center and we need your help.");
+
+function dateCheck(from,to,check) {
+  var fDate,lDate,cDate;
+  fDate = Date.parse(from);
+  lDate = Date.parse(to);
+  cDate = Date.parse(check);
+  if((cDate <= lDate && cDate >= fDate)) {
+      return true;
+  }
+  return false;
+}
 
 
+
+// PHOTO CAROUSEL
+
+$('.ERCGallery').slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: false,
+  variableWidth: true
+});

@@ -30,8 +30,8 @@ body
   text-indent: -9999rem
   cursor pointer
   position: absolute;
-  top: 11vw;
-  left: 11vw;
+  top: unit4;
+  left: unit4;
   
 .column {
   position: relative;
@@ -74,7 +74,7 @@ body
 
 .FundADay_WillYouBe {
   background: color-black;
-  padding: unit3 0 unit1 0;
+  padding: unit2 0 0 0;
 }
 
 .FundADay_BigForm {
@@ -101,5 +101,28 @@ body
   padding-top: unit6
 }
 
+.ERCGallery {
+  width: 100%;
+  background: color-black;
+  max-height: 90vw;
+  overflow: hidden;
+}
+.ERCGallery button, .ERCGallery ul {
+  display: none !important;
+}
+.ERCGallery img{
+  max-height: 90vw;
+}
+.ERCGallery img{
+  max-width: 100%;
+  filter: grayscale(100%);
+}
+.ERCGallery .slick-slide {
+  opacity: .4;
+  transition: opacity 200ms ease-out;
+}
+.ERCGallery .slick-current {
+  opacity: 1
+}
 
 

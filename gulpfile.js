@@ -17,6 +17,7 @@ elixir(function(mix) {
     .scripts([
         'jquery.min.js',
         'jquery-ui.min.js',
+        'slick.js',
         'moment.js',
         'main.js',
         'api.js'

@@ -145,11 +145,11 @@
 .ui-datepicker {
   padding: 0;
   border: none;
-  width: 295px;
+  width: 100%;
   background: black;
-  min-height: 425px;
+  min-height: 370px;
   padding-top: 30px;
-  margin-bottom: -25px;
+  margin-bottom: -10px;
 }
 
 .ui-corner-all {
@@ -197,9 +197,15 @@
   border: none; 
 }
 
-// .ui-datepicker-today .ui-state-default.ui-state-highlight {
-//   color: hsla(255,100%,100%,.3)
-// }
+.ui-datepicker .ui-datepicker-today .ui-state-highlight {
+  color: #555;
+  background: transparent;
+}
+
+.ui-datepicker .ui-datepicker-today .ui-state-default {
+  color: black;
+  background: white;
+}
 
 .ui-datepicker-calendar .ui-state-default {
   background: none;
@@ -208,8 +214,12 @@
   height: 33px;
   width: 33px;
   line-height: 25px;
-  border: 1px solid hsla(255,100%,100%,.3);
+  //border: 1px solid hsla(255,100%,100%,.3);
   border-radius: 100%;
+}
+.ui-datepicker td {
+  padding-bottom: 5px;
+  border: 1px solid #555;
 }
 .ui-datepicker-calendar .ui-state-highlight {
   color: white;
@@ -334,8 +344,6 @@ input[type='text'] {
   text-align: center;
 }
 
-// CHECKBOX
-
 .FormUICheckbox {
   display: block;
   position: relative;
@@ -352,8 +360,8 @@ input[type='text'] {
   position: absolute;
   top: 2px;
   left: 0;
-  height: 1rem;
-  width: 1rem;
+  height: 15px;
+  width: 15px;
   background: #fff;
   border: 1px solid #000;
 }
@@ -389,9 +397,18 @@ input[type='text'] {
   border: solid #fff;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+  opacity: 0;
+  animation: CheckboxBounce 200ms 1 forwards;
+  
 }
 .FormUICheckbox--checkbox input:disabled ~ .FormUICheckbox__indicator:after {
   border-color: #999;
+}
+
+@keyframes CheckboxBounce {
+  0%   { opacity: 0; transform: scale(.5) rotate(45deg)}
+  90% { opacity: 1; transform:scale(1.4) rotate(45deg) }
+  100% { opacity: 1; transform:scale(1) rotate(45deg)}
 }
 
 // EXP DATE

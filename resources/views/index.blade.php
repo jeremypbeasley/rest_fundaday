@@ -24,7 +24,7 @@
     <!-- <div class="BigPhoto Intro"></div> -->
     <div class="column col-xs-12 col-md-8">
       <article class="CenterBlock">
-        <h2>Seattle needs a place where a girl can safely escape a life that abuses or exploits her.</h2>
+        <h2 class="Serif">Seattle needs a place where a girl can safely escape a life that abuses or exploits her.</h2>
       </article>
     </div>
   </div>
@@ -35,7 +35,7 @@
   <div class="row">
     <div class="column col-xs-12">
       <article class="CenterBlock">
-        <h2 class="Serif pb5">This August, we open our Emergency Care Center. We need your help.</h2>
+        <h2 class="SansSerif pb5 WeNeedYourHelp"></h2>
         <p>Last year, there were no beds available in King County for nearly 40% of women who contacted REST for a place to stay. </p>
         <p>The ERC will provide up to 7 girls 30 days of emergency housing, intensive case management, and daytime programming to help guests begin to stabilize and consider what life free from exploitation looks and feels like.</p>
         <p class="underlined"><a href="">Learn more about the ERC</a></p>
@@ -47,19 +47,26 @@
   <div class="row">
     <div class="column col-xs-12 col-md-6 col-md-offset-5">
       <article class="CenterBlock">
-        <h2 class="SansSerif pb5">For just $1,500, you can fund an entire day of our new Emergency Recieving Center.</h2>
+        <h2 class="Serif pb5">For just $1,500, you can fund the ERC for an entire day.</h2>
         <p>It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24/7 live-in staff, food, utlitities, phones, furniture, activities, etc.</p>
         <p class="underlined"><a href="">See the cost breakdown</a></p>
       </article>
     </div>
   </div>
 </section>
+<section class="ERCGallery">
+  <div><img src="_img/slide4.jpg"></div>
+  <div><img src="_img/slide3.jpg"></div>
+  <div><img src="_img/slide2.jpg"></div>
+  <div><img src="_img/slide1.jpg"></div>
+  <!-- <div><img src="http://cdn2.dropmark.com/39456/f8652ba5ff68635386f1a26996c89d6cb42db0a4/198033.jpg"></div> -->
+</section >
 <form id="form-donate">
-  <section class="FundADay_WillYouBe NegativeBlock">
+  <section class="FundADay_WillYouBe NegativeBlock ">
     <div class="row">
       <div class="column col-xs-12 col-md-6 col-md-offset-3 DateDiv">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <h2 class="Serif mb4">89 <span class="Superscript">of</span> 365 days have been funded. Will you fund the 90th?</h2>
+        <h2 class="SansSerif mb4">89 <span class="Superscript">of</span> 365 days have been funded. Will you fund the 90th?</h2>
         <!-- <label class="DateLabel">Choose A Day </label> -->
           <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
       </div>
