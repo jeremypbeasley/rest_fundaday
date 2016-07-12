@@ -3099,17 +3099,6 @@ return e.ui.ddmanager&&(e.ui.ddmanager.current=this),e.ui.ddmanager&&!o.dropBeha
 
 }));
 
-$("#date-input").focus(function() {
-  // scroll to top of field on focus
-  $('html, body').animate({ scrollTop: $("#date-input").offset().top -50}, 200);
-  // Match widths of date-picker and above field
-  var dateFieldWidth = $("#date-input").outerWidth()
-  console.log(dateFieldWidth);
-  $('#ui-datepicker-div').css("max-width", dateFieldWidth + "px");
-  $('#ui-datepicker-div').css("min-width", dateFieldWidth + "px");
-});
-
-
 var fundedDates = [
   "2016-06-14",
   "2016-06-15",
@@ -3129,13 +3118,20 @@ var fundedDates = [
   "2016-08-25",
 ]
 
-$('#date-input').datepicker({
-    beforeShowDay: function(date){
-        var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-        return [ fundedDates.indexOf(string) == -1 ]
-    }
-  
+$('.DateDiv').datepicker({
+  beforeShowDay: function(date){
+    var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+    return [ fundedDates.indexOf(string) == -1,"" ];
+  },
+  onSelect: function(dateText, obj){
+    $('#date-input').val(dateText); 
+  }
 });
+
+
+// onSelect: function(date, obj){
+//   $('#date-input').val(date); 
+// }
 
 var headerHtml = $("#material-header-holder .ui-datepicker-material-header");
 
@@ -3144,16 +3140,14 @@ var changeMaterialHeader = function(header, date) {
   var month  = date.format('MMM');
   var dayNum = date.format('D');
   var isoDay = date.isoWeekday();
-  
-	var weekday = new Array(7);
-	weekday[1] = "Monday";
-	weekday[2] = "Tuesday";
-	weekday[3] = "Wednesday";
-	weekday[4] = "Thursday";
-	weekday[5] = "Friday";
-	weekday[6] = "Saturday";
-	weekday[7]=  "Sunday";
-
+  var weekday = new Array(7);
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  weekday[7]=  "Sunday";
   $('.ui-datepicker-material-day', header).text(weekday[isoDay]);
   $('.ui-datepicker-material-year', header).text(year);
   $('.ui-datepicker-material-month', header).text(month);
@@ -3168,24 +3162,15 @@ $.datepicker._selectDate = function(id, dateStr) {
   $.datepicker._selectDateOverload(id, dateStr);
   inst.inline = false;
   this._updateDatepicker(inst);
-  
   headerHtml.remove();
   $(".ui-datepicker").prepend(headerHtml);
 };
 
 $("input[data-type='date']").on("focus", function() {
- 	$(".ui-datepicker").prepend(headerHtml);
-  $(window).scrollTop($('#date-input').offset(0));
+  $(".ui-datepicker").prepend(headerHtml);
 });
 
-$("input[data-type='date']").datepicker({
-  showButtonPanel: false,
-  autoclose: true,
-  closeText: 'OK',
-  onSelect: function(date, inst) {
-    changeMaterialHeader(headerHtml,moment(date, 'MM/DD/YYYY'));
-  },
-});
+changeMaterialHeader(headerHtml, moment());
 
 // changeMaterialHeader(headerHtml, moment());
 // $('#date-input').datepicker('show');

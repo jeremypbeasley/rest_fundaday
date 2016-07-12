@@ -2409,6 +2409,138 @@ body .ui-tooltip {
   src: url("/_fonts/GaramondNo4TLig_Italic.eot");
   src: url("/_fonts/GaramondNo4TLig_Italic.eot") format('embedded-opentype'), url("/_fonts/GaramondNo4TLig_Italic.woff2") format('woff2'), url("/_fonts/GaramondNo4TLig_Italic.woff") format('woff'), url("/_fonts/GaramondNo4TLig_Italic.ttf") format('truetype'), url("/_fonts/GaramondNo4TLig_Italic.svg#GaramondNo4TLig_Italic") format('svg');
 }
+.mb0 {
+  margin-bottom: 4px;
+}
+.mb1 {
+  margin-bottom: 8px;
+}
+.mb2 {
+  margin-bottom: 16px;
+}
+.mb3 {
+  margin-bottom: 24px;
+}
+.mb4 {
+  margin-bottom: 32px;
+}
+.mb5 {
+  margin-bottom: 40px;
+}
+.mb6 {
+  margin-bottom: 48px;
+}
+.mb7 {
+  margin-bottom: 56px;
+}
+.mb8 {
+  margin-bottom: 64px;
+}
+.mb9 {
+  margin-bottom: 72px;
+}
+.mb10 {
+  margin-bottom: 80px;
+}
+.mt0 {
+  margin-top: 4px;
+}
+.mt1 {
+  margin-top: 8px;
+}
+.mt2 {
+  margin-top: 16px;
+}
+.mt3 {
+  margin-top: 24px;
+}
+.mt4 {
+  margin-top: 32px;
+}
+.mt5 {
+  margin-top: 40px;
+}
+.mt6 {
+  margin-top: 48px;
+}
+.mt7 {
+  margin-top: 56px;
+}
+.mt8 {
+  margin-top: 64px;
+}
+.mt9 {
+  margin-top: 72px;
+}
+.mt10 {
+  margin-top: 80px;
+}
+.pb0 {
+  padding-bottom: 4px;
+}
+.pb1 {
+  padding-bottom: 8px;
+}
+.pb2 {
+  padding-bottom: 16px;
+}
+.pb3 {
+  padding-bottom: 24px;
+}
+.pb4 {
+  padding-bottom: 32px;
+}
+.pb5 {
+  padding-bottom: 40px;
+}
+.pb6 {
+  padding-bottom: 48px;
+}
+.pb7 {
+  padding-bottom: 56px;
+}
+.pb8 {
+  padding-bottom: 64px;
+}
+.pb9 {
+  padding-bottom: 72px;
+}
+.pb10 {
+  padding-bottom: 80px;
+}
+.pt0 {
+  padding-top: 4px;
+}
+.pt1 {
+  padding-top: 8px;
+}
+.pt2 {
+  padding-top: 16px;
+}
+.pt3 {
+  padding-top: 24px;
+}
+.pt4 {
+  padding-top: 32px;
+}
+.pt5 {
+  padding-top: 40px;
+}
+.pt6 {
+  padding-top: 48px;
+}
+.pt7 {
+  padding-top: 56px;
+}
+.pt8 {
+  padding-top: 64px;
+}
+.pt9 {
+  padding-top: 72px;
+}
+.pt10 {
+  padding-top: 80px;
+}
 .col-md-1,
 .col-md-2,
 .col-md-3,
@@ -2466,11 +2598,11 @@ body .ui-tooltip {
 .col-md-offset-10,
 .col-md-offset-11,
 .col-md-offset-12 {
-  padding-right: 2vw;
-  padding-left: 2vw;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 .row {
-  padding: 4.5vw 9vw;
+  padding: 16px 32px;
   overflow: visible;
   z-index: 10;
   margin-left: 0px;
@@ -2480,12 +2612,12 @@ body .ui-tooltip {
   z-index: 11;
 }
 html {
-  font-size: 16px;
-  font-family: GaramondNo4TLig, serif, serif;
+  font-size: 15px;
+  font-family: GaramondNo4TLig, serif;
 }
 @media (min-width: 62em) {
   html {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 body,
@@ -2512,17 +2644,17 @@ p.noTop {
 }
 p i,
 p em {
-  font-family: GaramondNo4TLig_Italic, serif;
+  font-family: GaramondNo4TLig, serif;
   font-style: normal;
 }
 p i.small,
 p em.small {
-  font-family: CircularStdBook;
+  font-family: CircularStdBook, CircularStdBold, sans-serif;
   font-size: 0.85rem;
   opacity: 0.4;
 }
 p em {
-  font-family: CircularStdBook;
+  font-family: CircularStdBook, CircularStdBold, sans-serif;
   font-size: 0.9rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -2534,36 +2666,9 @@ p a {
 .col-md-4 p {
   text-align: left;
 }
-a {
+a,
+a:visited {
   text-decoration: none;
-  color: text-color;
-}
-a.cta {
-  font-family: CircularStdBook, CircularStdBold, sans-serif;
-  font-size: 0.9rem;
-  padding: 0.5rem 0.8rem;
-  border: 1px solid;
-  transition: all 200ms ease-out;
-  position: relative;
-  top: 1.2rem;
-  background: transparent;
-  color: #000;
-  border-color: #000;
-  cursor: pointer;
-}
-a.cta:hover {
-  background: #000;
-  color: #fff;
-  border-color: #000;
-}
-a.cta.inverted {
-  border-color: #fff;
-  color: #fff;
-  background: transparent;
-}
-a.cta.inverted:hover {
-  border-color: #fff;
-  background: #fff;
   color: #000;
 }
 ul {
@@ -2604,59 +2709,40 @@ h5 i,
 h6 i {
   font-style: normal;
 }
-h1 {
-  font-size: 9vw;
-  margin-top: -1vw;
+h1.Serif,
+h2.Serif,
+h3.Serif,
+h4.Serif,
+h5.Serif,
+h6.Serif {
   font-family: GaramondNo4TLig, serif;
 }
-@media (min-width: 62em) {
-  h1 {
-    font-size: 7.5vw;
-  }
+h1.SansSerif,
+h2.SansSerif,
+h3.SansSerif,
+h4.SansSerif,
+h5.SansSerif,
+h6.SansSerif {
+  font-family: CircularStdBook, CircularStdBold, sans-serif;
+}
+h1 {
+  font-size: 3rem;
+  margin-top: -0.25em;
 }
 h2 {
-  font-size: 8vw;
-  font-family: CircularStdBook, CircularStdBold, sans-serif;
-  margin: 0em 0 1em 0;
-}
-@media (min-width: 62em) {
-  h2 {
-    font-size: 4vw;
-    margin: -0.53rem 0px 2.5rem 0px;
-  }
+  font-size: 2.2rem;
+  margin-top: -0.25em;
 }
 h3,
 h4 {
-  font-size: 0.9rem;
-  font-family: CircularStdBook, CircularStdBold, sans-serif;
-  margin-bottom: 10vw;
+  font-size: 1rem;
 }
-@media (min-width: 62em) {
-  h3,
-  h4 {
-    margin-bottom: 2rem;
-  }
-}
-.BlogContainer h3 {
-  font-size: 8vw;
-  font-family: CircularStdBook, CircularStdBold, sans-serif;
-  margin: 0em 0 1em 0;
-}
-@media (min-width: 62em) {
-  .BlogContainer h3 {
-    font-size: 4vw;
-    margin: 1.5rem 0px 2.5rem 0px;
-  }
-}
-h4 {
-  font-size: 2.3rem;
-}
-h5 {
-  font-size: 1.8rem;
-}
-h6 {
-  font-size: 1.25rem;
-  color: #00f;
+span.Superscript {
+  font-size: 0.5em;
+/* font-style: italic; */
+  margin-top: -0.5em;
+  position: relative;
+  top: -0.4em;
 }
 .underlined a {
   padding-bottom: 3px;
@@ -2669,40 +2755,6 @@ h6 {
 .underlined a:hover {
   border-color: #dc4405;
   color: #dc4405;
-}
-.quote {
-  position: relative;
-  z-index: 15 !important;
-}
-.quote h2 {
-  font-family: GaramondNo4TLig_Italic, serif;
-  z-index: 15;
-}
-.quote p {
-  color: #999;
-}
-.quote span {
-  position: absolute;
-  left: -0.4em;
-}
-.post h3,
-.post h4 {
-  font-family: CircularStdBook, CircularStdBold, sans-serif;
-  font-size: 2vw;
-  margin-top: 2rem;
-}
-.post strong,
-.post em {
-  font-family: CircularStdBook, CircularStdBold, sans-serif;
-  margin: 2em 0;
-  display: block;
-}
-.post sup {
-  font-size: 50%;
-  top: -1em;
-}
-.post ol {
-  opacity: 0.5;
 }
 html {
   min-height: 100%;
@@ -2718,7 +2770,6 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   margin: 0;
-  padding-bottom: 10vw;
 }
 .hidden {
   display: none;
@@ -2727,7 +2778,7 @@ body {
 .logo {
   width: 5rem;
   height: 2.5rem;
-  background: url("/_img/rest_logo_outline.svg") no-repeat;
+  background: url("../_img/rest_logo_outline.svg") no-repeat;
   display: block;
   background-size: 100%;
   z-index: 9996;
@@ -2743,67 +2794,20 @@ body {
   position: relative;
 }
 .FundADay_Intro .column {
-  min-height: calc(60vh - 5.5vw);
   margin-top: 25vw;
 }
-.FundADay_FinancialCase {
-  height: 100vh;
+.FundADay_Intro h2 {
+  padding: 88px 0;
+}
+.FundADay_BigPhoto {
+  height: 80vh;
+  width: 100vw;
   background-size: cover;
-  background-position: center center;
-  background-image: url("https://iwantrest.com/_img/blog_donatebg_desktop.jpg");
+  background-position: 20% center;
+  background-image: url("../_img/blog_donatebg_desktop.jpg");
+  background-repeat: no-repeat;
 }
-.FundADay_FinancialCase .column {
-  min-height: calc(100vh - 5.5vw);
-}
-.FundADay_Calendar {
-  width: 100%;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-.FundADay_CalendarScroll {
-  width: 825vw;
-  margin: 7.5vw;
-}
-.FundADay_Calendar::-webkit-scrollbar,
-.FundADay_CalendarScroll::-webkit-scrollbar {
-  display: none;
-  height: 0px;
-  width: 0px;
-  opacity: 0;
-}
-@media (min-width: 62em) {
-  .FundADay_CalendarScroll {
-    width: 100%;
-  }
-}
-@media (min-width: 62em) {
-  .FundADay_Calendar {
-    width: 100%;
-  }
-}
-.FundADay_CalendarMonth {
-  width: 60vw;
-  display: inline-block;
-  margin: 3.5vw;
-  font-family: CircularStdBook;
-}
-@media (min-width: 62em) {
-  .FundADay_CalendarMonth {
-    width: 12%;
-    margin: 1.5vw;
-  }
-}
-.FundADay_CalendarMonth img {
-  width: 100%;
-}
-.CenterBlock {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.NegativeBlock {
-  color: #fff;
-}
+.NegativeBlock,
 .NegativeBlock h1,
 .NegativeBlock h2,
 .NegativeBlock h3,
@@ -2812,15 +2816,40 @@ body {
   color: #fff;
   border-color: #fff;
 }
-.FundADay_FormSubmit {
-  width: 100%;
+.FundADay_WhatIsERC {
+  padding: 24px 0 8px 0;
+}
+.FundADay_FinancialCase {
+  background-size: cover;
+  background-position: center center;
+  background-color: #dc4405;
+  background-image: url("https://iwantrest.com/_img/featphoto_home.jpg");
+  padding: 24px 0 0 0;
+  margin-bottom: -1rem;
+}
+.FundADay_WillYouBe {
   background: #000;
-  color: #fff;
-  font-family: CircularStdBook, CircularStdBold, sans-serif;
-  border: none;
-  border-radius: 0px;
-  padding: 1rem;
+  padding: 24px 0 8px 0;
+}
+.FundADay_BigForm {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 16px;
+}
+.FundADay_Outro {
+  padding: 80px 40px;
   text-align: center;
+}
+.FundADay_Outro hr {
+  width: 50%;
+  height: 0px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  margin: 40px auto;
+}
+.FundADay_Outro p {
+  text-align: center;
+  padding-top: 48px;
 }
 .DateLabel {
   width: 100%;
@@ -2836,9 +2865,10 @@ body {
   outline: none;
   font-size: 15px;
   border-radius: 0px;
-  box-shadow: inset 0px 0px 0px 0px #f00;
+  box-shadow: 3px 3px 0px 0px #000;
   -webkit-appearance: none;
   font-family: CircularStdBook;
+  display: none;
 }
 .ui-datepicker-header {
   cursor: pointer;
@@ -2862,13 +2892,13 @@ body {
 }
 .ui-icon-circle-triangle-w {
   border-radius: 100%;
-  background-image: url("http://fund-a-day.iwantrest.com/_img/ic_keyboard_arrow_left_white_24px.svg") !important;
+  background-image: url("../_img/ic_keyboard_arrow_left_white_24px.svg") !important;
   background-size: 150%;
   background-position: center center;
 }
 .ui-icon-circle-triangle-e {
   border-radius: 100%;
-  background-image: url("http://fund-a-day.iwantrest.com/_img/ic_keyboard_arrow_right_white_24px.svg") !important;
+  background-image: url("../_img/ic_keyboard_arrow_right_white_24px.svg") !important;
   background-size: 150%;
   background-position: center center;
 }
@@ -2880,7 +2910,7 @@ body {
 .ui-widget-content .ui-state-disabled span {
   color: #00af66;
   color: #000;
-  background-image: url("http://fund-a-day.iwantrest.com/_img/ic_check_white_24px.svg");
+  background-image: url("../_img/ic_check_white_24px.svg");
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center center;
@@ -2902,6 +2932,9 @@ body {
 }
 .ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled {
   text-decoration: none;
+}
+.ui-datepicker td {
+  padding-bottom: 15px;
 }
 .ui-datepicker-material-header {
   display: block;
@@ -2933,11 +2966,20 @@ body {
   font-weight: 200;
   color: rgba(255,255,255,0.4);
 }
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  margin-left: -12px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  margin-right: -12px;
+}
 .ui-datepicker {
   padding: 0;
   border: none;
-  width: 320px;
+  width: 295px;
   background: #000;
+  min-height: 425px;
+  padding-top: 30px;
+  margin-bottom: -25px;
 }
 .ui-corner-all {
   border-radius: 0;
@@ -2948,9 +2990,11 @@ body {
 .ui-datepicker-header {
   text-align: center;
   background: #000;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 300;
   color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 .ui-datepicker-header .ui-datepicker-prev,
 .ui-datepicker-header .ui-datepicker-next,
@@ -2965,13 +3009,23 @@ body {
   outline: none;
   background: #b4cbe5;
 }
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  color: sla(255, 100%, 100%, 0.3);
+}
+.ui-datepicker-calendar .ui-datepicker-unselectable.ui-state-disabled .ui-state-default {
+  border: none;
+}
 .ui-datepicker-calendar .ui-state-default {
   background: none;
   border: none;
   text-align: center;
   height: 33px;
   width: 33px;
-  line-height: 36px;
+  line-height: 25px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 100%;
 }
 .ui-datepicker-calendar .ui-state-highlight {
   color: #fff;
@@ -3034,20 +3088,6 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-input[type='text'] {
-  width: 100%;
-  padding: 30px 10px 10px 60px;
-  font-size: 15px;
-  color: #000;
-  background-color: #fff;
-  max-width: 320px;
-  border: 1px solid #000;
-  border-radius: 0px;
-  -webkit-appearance: none;
-}
-form {
-  margin-bottom: 60vh;
-}
 .FormRow {
   display: block;
   position: relative;
@@ -3056,6 +3096,7 @@ form {
 .FormRow input {
   transition: 0.1s all linear;
   font-family: CircularStdBook;
+  box-shadow: 3px 3px 0px 0px #000;
 }
 .FormRow label {
   position: absolute;
@@ -3066,6 +3107,7 @@ form {
   color: #000;
   transition: 0.1s all linear;
   cursor: text;
+  z-index: 999;
 }
 .FormRow.active input {
   padding-left: 15px;
@@ -3074,6 +3116,93 @@ form {
   top: 11px;
   font-size: 11px;
   opacity: 0.4;
+}
+.FundADay_FormSubmit {
+  width: 100%;
+  background: #dc4405;
+  color: #fff;
+  font-family: CircularStdBook, CircularStdBold, sans-serif;
+  border: none;
+  border-radius: 0px;
+  padding: 1.4rem 1rem;
+  text-align: center;
+}
+.FormUICheckbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.FormUICheckbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.FormUICheckbox__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  background: #fff;
+  border: 1px solid #000;
+}
+.FormUICheckbox:hover input ~ .FormUICheckbox__indicator,
+.FormUICheckbox input:focus ~ .FormUICheckbox__indicator {
+  background: #000;
+}
+.FormUICheckbox input:checked ~ .FormUICheckbox__indicator {
+  background: #000;
+}
+.FormUICheckbox:hover input:not([disabled]):checked ~ .FormUICheckbox__indicator,
+.FormUICheckbox input:checked:focus ~ .FormUICheckbox__indicator {
+  background: #000;
+}
+.FormUICheckbox input:disabled ~ .FormUICheckbox__indicator {
+  background: #999;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.FormUICheckbox__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.FormUICheckbox input:checked ~ .FormUICheckbox__indicator:after {
+  display: block;
+}
+.FormUICheckbox--checkbox .FormUICheckbox__indicator:after {
+  left: 5px;
+  top: 2px;
+  width: 2px;
+  height: 6px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.FormUICheckbox--checkbox input:disabled ~ .FormUICheckbox__indicator:after {
+  border-color: #999;
+}
+.FormUIInputText {
+  width: 100%;
+  padding: 30px 10px 10px 60px;
+  font-size: 15px;
+  color: #000;
+  background-color: #fff;
+  max-width: 320px;
+  border: 1px solid #000;
+  border-radius: 0px;
+  -webkit-appearance: none;
+}
+.FormUIExpMonth {
+  width: calc(50% - 11px);
+  margin-right: 17px;
+  display: inline-block;
+}
+.FormUIExpYear {
+  width: calc(50% - 11px);
+  display: inline-block;
 }
 
 /*# sourceMappingURL=master.css.map */
