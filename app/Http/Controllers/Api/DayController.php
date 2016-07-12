@@ -74,7 +74,7 @@ class DayController extends Controller
         }
 
         if($found_unfunded_date){
-            $return_data['next_unfunded_date'] = $next_unfunded_date->format('Y-m-d');
+            $return_data['next_unfunded_date'] = $next_unfunded_date->format('m/d/Y');
         }
 
         return response()->json($return_data);

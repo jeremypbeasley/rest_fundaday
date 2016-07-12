@@ -6,6 +6,9 @@ var Api = {
 			var total = response.total_days;
 			$('#js-total-days-funded').text(total);
 			$('#js-total-days-funded-next').text(total+1);
+			if(response.next_unfunded_date){
+				//$('#date-input').datepicker('setDate',response.next_unfunded_date);
+			}
 		});
 
 		// bind events (form submit)
