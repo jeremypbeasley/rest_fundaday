@@ -7,6 +7,7 @@ return [
     'fund_a_day_product_name'=>'REST: Fund a Day',
     'fund_a_day_amount'=>1500,
     'fund_a_day_currency'=>'USD',
+    'fund_a_day_start_date'=>'2016-08-01',
 
 
 

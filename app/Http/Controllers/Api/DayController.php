@@ -32,12 +32,33 @@ class DayController extends Controller
     public function index()
     {
         $days = Day::orderBy('day')->get();
+        $start_date = config('app.fund_a_day_start_date');
+
+        $next_unfunded_date = new \Carbon\Carbon($start_date);
+        $last_date = new \Carbon\Carbon($start_date);
+        $last_date->addYear();
+        $today = new \Carbon\Carbon();
+
+        $next_unfunded_date = $today->gt($next_unfunded_date) ? $today : $next_unfunded_date;
+        $found_unfunded_date = false;
 
         $return_data = [];
         $return_data['days'] = [];
+        $return_data['next_unfunded_date'] = null;
         $return_data['total_days'] = $days->count();
 
         foreach($days as $day){
+            // have we found the first unfunded date yet?
+            if(!$found_unfunded_date){
+                if($day->day == $next_unfunded_date->format('Y-m-d')){
+                    // if this day has been funded - try the next day
+                    $next_unfunded_date->addDay();
+                }
+                else{
+                    // else - we found our date!
+                    $found_unfunded_date = true;
+                }
+            }
             $name = $day->is_anonymous ? 'Generous Donor' : $day->donor_name;
 
             $return_data['days'][] = [
@@ -45,6 +66,15 @@ class DayController extends Controller
                 'donor_name'=>$name,
                 'is_anonymous'=>$day->is_anonymous,
             ];
+        }
+
+        // now, if the all the days have been filled in order - we need to be sure that next_unfunded_date isn't < last_date
+        if($next_unfunded_date->lt($last_date)){
+            $found_unfunded_date = true;
+        }
+
+        if($found_unfunded_date){
+            $return_data['next_unfunded_date'] = $next_unfunded_date->format('Y-m-d');
         }
 
         return response()->json($return_data);
