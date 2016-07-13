@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Cartalyst\Stripe\Exception\CardErrorException;
 use Cartalyst\Stripe\Exception\MissingParameterException;
 
+use Crypt;
 use Day;
 use Exception;
 use Stripe;
@@ -189,7 +190,10 @@ class DayController extends Controller
             $day->statement_descriptor = $charge['statement_descriptor'];
             $day->save();
 
+            $encrypted = Crypt::encrypt($day->id.'!'.$day->stripe_customer_id.'!rest4weary');
+
             $return_data = [
+                "id"=>$encrypted,
                 "day"=> $day->day,
                 "name"=> $day->donor_name,
                 "is_anonymous"=> $day->is_anonymous,
