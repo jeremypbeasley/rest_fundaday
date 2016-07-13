@@ -1,3 +1,9 @@
+var getOrdinal = function(n) {
+   var s=["th","st","nd","rd"],
+       v=n%100;
+   return n+(s[(v-20)%10]||s[v]||s[0]);
+}
+
 var Api = {
 	init:function(){
 		// get total num days from API
@@ -5,7 +11,7 @@ var Api = {
 			console.log(response);
 			var total = response.total_days;
 			$('#js-total-days-funded').text(total);
-			$('#js-total-days-funded-next').text(total+1);
+			$('#js-total-days-funded-next').text(getOrdinal(total+1));
 			if(response.next_unfunded_date){
 				//$('#date-input').datepicker('setDate',response.next_unfunded_date);
 			}
