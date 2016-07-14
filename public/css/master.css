@@ -3255,13 +3255,13 @@ body {
 .ui-datepicker-calendar .ui-datepicker-unselectable.ui-state-disabled .ui-state-default {
   border: none;
 }
-.ui-datepicker .ui-datepicker-today .ui-state-highlight {
+.ui-datepicker .ui-datepicker-today .ui-state-highlight.ui-state-default {
   color: #555;
   background: transparent;
 }
-.ui-datepicker .ui-datepicker-today .ui-state-default {
+.ui-datepicker-current-day.ui-datepicker-today .ui-state-highlight.ui-state-default {
+  background: #f00;
   color: #000;
-  background: #fff;
 }
 .ui-datepicker-calendar .ui-state-default {
   background: none;
