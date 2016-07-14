@@ -43,6 +43,13 @@
     </div>
   </div>
 </section>
+<section class="ERCGallery">
+  <div><img src="_img/slide4.jpg"></div>
+  <div><img src="_img/slide3.jpg"></div>
+  <div><img src="_img/slide2.jpg"></div>
+  <div><img src="_img/slide1.jpg"></div>
+  <!-- <div><img src="http://cdn2.dropmark.com/39456/f8652ba5ff68635386f1a26996c89d6cb42db0a4/198033.jpg"></div> -->
+</section >
 <section class="FundADay_FinancialCase NegativeBlock">
   <div class="row">
     <div class="column col-xs-12 col-md-6 col-md-offset-5">
@@ -54,13 +61,6 @@
     </div>
   </div>
 </section>
-<section class="ERCGallery">
-  <div><img src="_img/slide4.jpg"></div>
-  <div><img src="_img/slide3.jpg"></div>
-  <div><img src="_img/slide2.jpg"></div>
-  <div><img src="_img/slide1.jpg"></div>
-  <!-- <div><img src="http://cdn2.dropmark.com/39456/f8652ba5ff68635386f1a26996c89d6cb42db0a4/198033.jpg"></div> -->
-</section >
 <form id="form-donate">
   <section class="FundADay_WillYouBe NegativeBlock ">
     <div class="row">
