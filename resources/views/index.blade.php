@@ -66,11 +66,13 @@
     <div class="row">
       <div class="column col-xs-12 col-md-6 col-md-offset-3 DateDiv">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <h2 class="SansSerif mb4">89 <span class="Superscript">of</span> 365 days have been funded. Will you fund the 90th?</h2>
+        <h2 class="SansSerif mb2">89 <span class="Superscript">of</span> 365 days have been funded. Will you fund the 90th?</h2>
         <!-- <label class="DateLabel">Choose A Day </label> -->
         <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
       </div>
       <div class="column col-xs-12 ChosenDay">
+          <p class="SansSerif op50 mt2 mb1">The next unfunded day is</p>
+          <h2 class="SansSerif mb2 mt1">July 20, 2016.</h2>
       </div>
     </div>
   </section>

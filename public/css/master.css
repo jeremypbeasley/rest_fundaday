@@ -2884,7 +2884,7 @@ body {
   padding: 24px 0 8px 0;
 }
 .FundADay_FinancialCase {
-  background-size: cover;
+  background-size: 600%;
   background-position: center center;
   background-color: #dc4405;
   background-image: url("https://iwantrest.com/_img/featphoto_home.jpg");
@@ -3066,8 +3066,7 @@ body {
   border: none;
   width: 100%;
   background: #000;
-  min-height: 370px;
-  padding-top: 30px;
+  min-height: 333px;
   margin-bottom: -10px;
 }
 .ui-corner-all {
