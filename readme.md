@@ -1,6 +1,6 @@
 # REST Fund a Day
 
-## Built on Laravel 5.2
+## Built on Laravel 5.0
 
 Download and install Laravel, as well as Laravel Homestead to get your local environment up and running.
 
