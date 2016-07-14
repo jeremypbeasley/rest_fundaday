@@ -105,6 +105,8 @@ class DayController extends Controller
             $input['is_anonymous'] = 0;
         }
 
+        
+
         // Convert date format
         $input['day'] = date('Y-m-d',strtotime($input['day']));
 
