@@ -73,29 +73,29 @@
       <div class="column col-xs-12">
         <label class="DateLabel">Personal Information </label>
         <div class="FormRow">
-          <label for="d3">Full Name</label>
-          <input id="d3" name="name" class="FormUIInputText" type="text" />
+          <label for="input-name">Full Name</label>
+          <input id="input-name" name="name" class="FormUIInputText" type="text" required />
         </div>
         <div class="FormRow">
-          <label for="d3">Email Address</label>
-          <input id="d3" name="email" class="FormUIInputText" type="text" />
+          <label for="input-email">Email Address</label>
+          <input id="input-email" name="email" class="FormUIInputText" type="text" required />
         </div>
         <label class="DateLabel">Payment </label>
         <div class="FormRow">
-          <label for="d3">Credit Card #</label>
-          <input id="d3" name="cc_number" class="FormUIInputText" type="text" />
+          <label for="input-ccnumber">Credit Card #</label>
+          <input id="input-ccnumber" name="cc_number" class="FormUIInputText" type="text" required />
         </div>
         <div class="FormRow FormUIExpMonth">
-          <label for="d3">Exp. Month</label>
-          <input id="d3" name="cc_exp_month" class="FormUIInputText" type="text" />
+          <label for="input-ccexpmonth">Exp. Month</label>
+          <input id="input-ccexpmonth" name="cc_exp_month" class="FormUIInputText" type="text" required />
         </div>
         <div class="FormRow FormUIExpYear">
-          <label for="d3">Exp. Year</label>
-          <input id="expyear" name="cc_exp_year" class="FormUIInputText" type="text" />
+          <label for="expyear">Exp. Year</label>
+          <input id="expyear" name="cc_exp_year" class="FormUIInputText" type="text" required />
         </div>
         <div class="FormRow">
-          <label for="d3">CVV (Security Code)</label>
-          <input id="d3" name="cvc" class="FormUIInputText" type="text" />
+          <label for="input-cvc">CVV (Security Code)</label>
+          <input id="input-cvc" name="cvc" class="FormUIInputText" type="text" required />
         </div>
         <div class="FormRow">
         <Br>

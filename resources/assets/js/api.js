@@ -3,7 +3,7 @@ var getOrdinal = function(n) {
        v=n%100;
    return n+(s[(v-20)%10]||s[v]||s[0]);
 }
-
+$('#form-donate').validate();
 var Api = {
 	init:function(){
 		// get total num days from API
@@ -16,6 +16,8 @@ var Api = {
 				//$('#date-input').datepicker('setDate',response.next_unfunded_date);
 			}
 		});
+
+		
 
 		// bind events (form submit)
 		this.bindEvents();
