@@ -52,11 +52,11 @@ Route::get('/thank-you/{encrypted}', function ($encrypted) {
     return view('thank-you',$view);
 });
 
-Route::group(['prefix' => 'api','as'=>'api.','namespace'=>'Api'], function () {
+Route::group(['prefix' => 'api'], function () {
     Route::get('days', [
-    	'as' => 'days', 'uses' => 'DayController@index'
+    	'as' => 'api.days', 'uses' => 'Api\DayController@index'
 	]);
 	Route::post('days', [
-    	'as' => 'days.create', 'uses' => 'DayController@create'
+    	'as' => 'api.days.create', 'uses' => 'Api\DayController@create'
 	]);
 });

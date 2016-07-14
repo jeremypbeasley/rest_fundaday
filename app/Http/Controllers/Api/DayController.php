@@ -167,7 +167,7 @@ class DayController extends Controller
             return response()->json($return_data,400);
         } catch (Exception $e){
             $return_data = [
-                'status' => 'failed',
+                'status' => 'failed '.$e->getMessage(),
                 'error'=>'stripe'
             ];
             return response()->json($return_data,400);

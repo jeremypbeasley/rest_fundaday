@@ -1,5 +1,4 @@
 var elixir = require('laravel-elixir');
-require('laravel-elixir-stylus');
 
 /*
  |--------------------------------------------------------------------------
@@ -7,19 +6,11 @@ require('laravel-elixir-stylus');
  |--------------------------------------------------------------------------
  |
  | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
+ | for your Laravel application. By default, we are compiling the Less
  | file for our application, as well as publishing vendor resources.
  |
  */
 
 elixir(function(mix) {
-    mix.stylus('master.styl')
-    .scripts([
-        'jquery.min.js',
-        'jquery-ui.min.js',
-        'slick.js',
-        'moment.js',
-        'main.js',
-        'api.js'
-    ]);
+    mix.less('app.less');
 });
