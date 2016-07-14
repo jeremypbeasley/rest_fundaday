@@ -18,15 +18,8 @@ var fundedDates = [
   "2016-08-25",
 ]
 
-$('.DateDiv').datepicker({
-  beforeShowDay: function(date){
-    var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-    return [ fundedDates.indexOf(string) == -1,"" ];
-  },
-  onSelect: function(dateText, obj){
-    $('#date-input').val(dateText); 
-  }
-});
+
+
 
 
 // onSelect: function(date, obj){
@@ -138,6 +131,28 @@ function dateCheck(from,to,check) {
   return false;
 }
 
+function displayChosenDay(chosenDay) {
+  var chosenDayMsg = '<h2 class="SansSerif mb2 mt1">You’ve chosen <br>' + chosenDay + '.</h2><p class="SansSerif op50">This day is currently unfunded.</p>';
+  $(".ChosenDay").html(chosenDayMsg);
+}
+
+$('.DateDiv').datepicker({
+  beforeShowDay: function(date){
+    var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+    return [ fundedDates.indexOf(string) == -1,"" ];
+    console.log(string);
+  },
+  dateFormat:'MM dd, yy',
+  onSelect: function(dateText, obj){
+    $('#date-input').val(dateText); 
+  },
+  onSelect: function(dateText, obj){
+    var date = $(this).val();
+    displayChosenDay(date);
+    var woahdate = $('.DateDiv').datepicker({ dateFormat: 'mm-dd-yy' }).val();
+    console.log(woahdate);
+  }
+});
 
 
 // PHOTO CAROUSEL

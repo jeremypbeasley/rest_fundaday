@@ -68,7 +68,9 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <h2 class="SansSerif mb4">89 <span class="Superscript">of</span> 365 days have been funded. Will you fund the 90th?</h2>
         <!-- <label class="DateLabel">Choose A Day </label> -->
-          <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
+        <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
+      </div>
+      <div class="column col-xs-12 ChosenDay">
       </div>
     </div>
   </section>
@@ -125,5 +127,15 @@
   </section>
 </form>
 <script src="/js/all.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29157146-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
