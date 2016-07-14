@@ -101,7 +101,7 @@ class DayController extends Controller
         ]);
 
         $input = $request->all();
-        if(array_key_exists('is_anonymous', $input)){
+        if(!array_key_exists('is_anonymous', $input)){
             $input['is_anonymous'] = 0;
         }
 

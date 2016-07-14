@@ -105,9 +105,8 @@
         <div class="FormRow">
          <button class="FundADay_FormSubmit" type="submit">Give Now</button>
         </div>
-        <input name="is_anonymous" type="hidden" value="0">
         <label class="FormUICheckbox FormUICheckbox--checkbox mt4 ">I’d like my name not to be displayed publicly on this page.
-          <input type="checkbox"/>
+          <input name="is_anonymous" value="1" type="checkbox"/>
           <div class="FormUICheckbox__indicator"></div>
         </label>
       </div>
