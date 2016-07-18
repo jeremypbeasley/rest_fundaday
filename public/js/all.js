@@ -6125,7 +6125,7 @@ function dateCheck(from,to,check) {
 }
 
 function displayChosenDay(chosenDay) {
-  var chosenDayMsg = '<h2 class="SansSerif mb2 mt1">You’ve chosen <br>' + chosenDay + '.</h2><p class="SansSerif op50">This day is currently unfunded.</p>';
+  var chosenDayMsg = '<p class="SansSerif mb0 mt1">You’ve chosen ' + chosenDay + '.</p><p class="SansSerif op50">This day is currently unfunded.</p>';
   $(".ChosenDay").html(chosenDayMsg);
 }
 
