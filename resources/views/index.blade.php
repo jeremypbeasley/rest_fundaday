@@ -14,7 +14,7 @@
 </head>
 <body>
 <header>
-  <div class="logo linked"><a href="/">...</a></div>
+  <div class="Logo linked"><a href="/">...</a></div>
 </header>
 
 <!-- END HEADER PARTIAL FILE -->
@@ -22,7 +22,7 @@
 <section class="FundADay_Intro">
   <div class="row">
     <!-- <div class="BigPhoto Intro"></div> -->
-    <div class="column col-xs-12 col-md-8">
+    <div class="column col-xs-12 col-md-5 col-md-offset-7">
       <article class="CenterBlock">
         <h2 class="Serif">Seattle needs a place where a girl can safely escape a life that abuses or exploits her.</h2>
       </article>
@@ -33,7 +33,7 @@
 </section>
 <section class="FundADay_WhatIsERC">
   <div class="row">
-    <div class="column col-xs-12">
+    <div class="column col-xs-12 col-md-6">
       <article class="CenterBlock">
         <h2 class="SansSerif pb5 WeNeedYourHelp"></h2>
         <p>Last year, there were no beds available in King County for nearly 40% of women who contacted REST for a place to stay. </p>
@@ -52,32 +52,34 @@
 </section >
 <section class="FundADay_FinancialCase NegativeBlock">
   <div class="row">
-    <div class="column col-xs-12 col-md-6 col-md-offset-5">
-      <article class="CenterBlock">
-        <h2 class="Serif pb5">For just $1,500, you can fund the ERC for an entire day.</h2>
-        <p>It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24/7 live-in staff, food, utlitities, phones, furniture, activities, etc.</p>
-        <p class="underlined"><a href="">See the cost breakdown</a></p>
-      </article>
+    <div class="column col-xs-12 col-md-6 col-md-offset-2">
+      <h2 class="Serif pb5">For just $1,500, you can fund the ERC for an entire day.</h2>
+    </div>
+    <div class="column col-xs-12 col-md-4 first-md">
+      <p>It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24/7 live-in staff, food, utlitities, phones, furniture, activities, etc.</p>
+      <p class="underlined"><a href="">See the cost breakdown</a></p>
     </div>
   </div>
 </section>
 <form id="form-donate">
   <section class="FundADay_WillYouBe NegativeBlock ">
     <div class="row">
-      <div class="column col-xs-12 col-md-6 col-md-offset-3 DateDiv">
+      <div class="column col-xs-12 col-md-6">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <h2 class="SansSerif mb2">89 <span class="Superscript">of</span> 365 days have been funded. Will you fund the 90th?</h2>
         <div class="ChosenDay mb2 mt4">
           <p class="SansSerif op50 mt1 mb0">The next unfunded day is</p>
-          <p class="SansSerif">July 20, 2016</h2>
+          <p class="SansSerif">July 20, 2016</p>
         </div>
+      </div>
+      <div class="column col-xs-12 col-md-6 DateDiv">
         <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
       </div>
     </div>
   </section>
   <section class="FundADay_BigForm">
     <div class="row">
-      <div class="column col-xs-12">
+      <div class="column col-xs-12 col-md-6">
         <label class="DateLabel">Personal Information </label>
         <div class="FormRow">
           <label for="d3">Full Name</label>

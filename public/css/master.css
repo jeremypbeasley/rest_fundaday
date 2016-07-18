@@ -2797,13 +2797,17 @@ h2 {
   font-size: 2.2rem;
   margin-top: -0.25em;
 }
+@media (min-width: 62em) {
+  h2 {
+    font-size: 50px;
+  }
+}
 h3,
 h4 {
   font-size: 1rem;
 }
 span.Superscript {
   font-size: 0.5em;
-/* font-style: italic; */
   margin-top: -0.5em;
   position: relative;
   top: -0.4em;
@@ -2839,7 +2843,7 @@ body {
   display: none;
   opacity: 0;
 }
-.logo {
+.Logo {
   width: 5rem;
   height: 2.5rem;
   background: url("../_img/rest_logo_outline.svg") no-repeat;
@@ -2857,11 +2861,27 @@ body {
 .column {
   position: relative;
 }
+@media (min-width: 62em) {
+  .FundADay_Intro {
+    min-height: 100vh;
+    position: relative;
+  }
+}
 .FundADay_Intro .column {
   margin-top: 25vw;
 }
+@media (min-width: 62em) {
+  .FundADay_Intro .column {
+    margin-top: 25vh;
+  }
+}
 .FundADay_Intro h2 {
-  padding: 88px 0;
+  padding: 20vh 0;
+}
+@media (min-width: 62em) {
+  .FundADay_Intro h2 {
+    padding: 0;
+  }
 }
 .FundADay_BigPhoto {
   height: 80vh;
@@ -2870,6 +2890,14 @@ body {
   background-position: 20% center;
   background-image: url("../_img/blog_donatebg_desktop.jpg");
   background-repeat: no-repeat;
+}
+@media (min-width: 62em) {
+  .FundADay_BigPhoto {
+    position: absolute;
+    top: 0vw;
+    height: 95vh;
+    width: 50vw;
+  }
 }
 .NegativeBlock,
 .NegativeBlock h1,
@@ -2883,6 +2911,11 @@ body {
 .FundADay_WhatIsERC {
   padding: 24px 0 8px 0;
 }
+@media (min-width: 62em) {
+  .FundADay_WhatIsERC {
+    padding: 9vw;
+  }
+}
 .FundADay_FinancialCase {
   background-size: 600%;
   background-position: center center;
@@ -2891,9 +2924,20 @@ body {
   padding: 24px 0 0 0;
   margin-bottom: -1rem;
 }
+@media (min-width: 62em) {
+  .FundADay_FinancialCase {
+    padding: 9vw;
+    background-size: cover;
+  }
+}
 .FundADay_WillYouBe {
   background: #000;
   padding: 16px 0 0 0;
+}
+@media (min-width: 62em) {
+  .FundADay_WillYouBe {
+    padding: 9vw;
+  }
 }
 .FundADay_BigForm {
   border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -2921,6 +2965,11 @@ body {
   max-height: 90vw;
   overflow: hidden;
 }
+@media (min-width: 62em) {
+  .ERCGallery {
+    display: none;
+  }
+}
 .ERCGallery button,
 .ERCGallery ul {
   display: none !important;
@@ -2935,6 +2984,18 @@ body {
 }
 .ERCGallery .slick-current {
   opacity: 1;
+}
+@media (min-width: 62em) {
+  section {
+    padding: 8vw;
+  }
+}
+@media (min-width: 62em) {
+  .Logo {
+    position: absolute;
+    top: calc(9vw + 32px);
+    left: calc(55vw + 32px);
+  }
 }
 .DateLabel {
   width: 100%;
@@ -3295,7 +3356,6 @@ input::-moz-focus-inner {
   font-size: 15px;
   color: #000;
   background-color: #fff;
-  max-width: 320px;
   border: 1px solid #000;
   border-radius: 0px;
   -webkit-appearance: none;

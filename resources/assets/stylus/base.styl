@@ -18,7 +18,7 @@ body
 	opacity 0
  
  
-.logo
+.Logo {
   width: 5rem
   height: 2.5rem
   background: url("../_img/rest_logo_outline.svg") no-repeat
@@ -32,17 +32,44 @@ body
   position: absolute;
   top: unit4;
   left: unit4;
-  
+}
 .column {
   position: relative;
 }
 
+// .FundADay_Intro {
+//   min-height: 100vh;
+//   position: relative;
+// }
+  
+@media laptop {
+  .FundADay_Intro {
+    min-height: 100vh;
+    position: relative;
+  }
+}
+// @media laptop {
+//   .FundADay_Intro .row {
+//     position: relative;
+//     top: 50%;
+//     transform: translateY(-50%);
+//   }
+// }
 .FundADay_Intro .column {
   margin-top: 25vw;
 }
-
+@media laptop {
+  .FundADay_Intro .column {
+    margin-top: 25vh;
+  }
+}
 .FundADay_Intro h2 {
-  padding: unit11 0;
+    padding: 20vh 0;
+}  
+@media laptop {
+  .FundADay_Intro h2 {
+    padding: 0;
+  }
 }
 
 .FundADay_BigPhoto {
@@ -54,6 +81,16 @@ body
   background-repeat: no-repeat;
 }
 
+@media laptop {
+  .FundADay_BigPhoto {
+    position: absolute;
+    top: 0vw;
+    height: 95vh;
+    width: 50vw;
+  }
+}
+
+
 .NegativeBlock, .NegativeBlock h1, .NegativeBlock h2, .NegativeBlock h3, .NegativeBlock p, .NegativeBlock a {
   color: color-white;
   border-color: color-white
@@ -61,6 +98,12 @@ body
 
 .FundADay_WhatIsERC {
   padding: unit3 0 unit1 0;
+}
+
+@media laptop {
+  .FundADay_WhatIsERC {
+    padding: 9vw;
+  }
 }
 
 .FundADay_FinancialCase {
@@ -72,9 +115,21 @@ body
   margin-bottom: -1rem;
 }
 
+@media laptop {
+  .FundADay_FinancialCase{
+    padding: 9vw;
+    background-size: cover;
+  }
+}
+
 .FundADay_WillYouBe {
   background: color-black;
   padding: unit2 0 0 0;
+}
+@media laptop {
+  .FundADay_WillYouBe {
+    padding: 9vw;
+  }
 }
 
 .FundADay_BigForm {
@@ -107,6 +162,11 @@ body
   max-height: 90vw;
   overflow: hidden;
 }
+@media laptop {
+  .ERCGallery{
+    display: none;
+  }
+}
 .ERCGallery button, .ERCGallery ul {
   display: none !important;
 }
@@ -124,5 +184,24 @@ body
 .ERCGallery .slick-current {
   opacity: 1
 }
+
+@media laptop {
+  section {
+    padding: 8vw;
+  }
+}
+
+@media laptop {
+  .Logo{
+    position: absolute;
+    top: calc(9vw + 32px);
+    left: calc(55vw + 32px);
+  }
+}
+
+
+
+
+
 
 
