@@ -63,12 +63,11 @@
       <div class="column col-xs-12 col-md-6 col-md-offset-3 DateDiv">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <h2 class="SansSerif mb2"><span id="js-total-days-funded">89</span> <span class="Superscript">of</span> 365 days have been funded. Will you fund the <span id="js-total-days-funded-next">90th</span>?</h2>
-        <!-- <label class="DateLabel">Choose A Day </label> -->
+        <div class="ChosenDay mb2 mt4">
+          <p class="SansSerif op50 mt1 mb0">The next unfunded day is</p>
+          <p class="SansSerif">July 20, 2016</h2>
+        </div>
         <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
-      </div>
-      <div class="column col-xs-12 ChosenDay">
-          <p class="SansSerif op50 mt2 mb1">The next unfunded day is</p>
-          <h2 class="SansSerif mb2 mt1">July 20, 2016.</h2>
       </div>
     </div>
   </section>
@@ -82,24 +81,24 @@
         </div>
         <div class="FormRow">
           <label for="input-email">Email Address</label>
-          <input id="input-email" name="email" class="FormUIInputText" type="text" required />
+          <input id="input-email" name="email" class="FormUIInputText" type="email" required />
         </div>
         <label class="DateLabel">Payment </label>
         <div class="FormRow">
           <label for="input-ccnumber">Credit Card #</label>
-          <input id="input-ccnumber" name="cc_number" class="FormUIInputText" type="text" required />
+          <input id="input-ccnumber" name="cc_number" class="FormUIInputText" type="tel" required />
         </div>
         <div class="FormRow FormUIExpMonth">
           <label for="input-ccexpmonth">Exp. Month</label>
-          <input id="input-ccexpmonth" name="cc_exp_month" class="FormUIInputText" type="text" required />
+          <input id="input-ccexpmonth" name="cc_exp_month" class="FormUIInputText" type="tel" required />
         </div>
         <div class="FormRow FormUIExpYear">
           <label for="expyear">Exp. Year</label>
-          <input id="expyear" name="cc_exp_year" class="FormUIInputText" type="text" required />
+          <input id="expyear" name="cc_exp_year" class="FormUIInputText" type="tel" required />
         </div>
         <div class="FormRow">
           <label for="input-cvc">CVV (Security Code)</label>
-          <input id="input-cvc" name="cvc" class="FormUIInputText" type="text" required />
+          <input id="input-cvc" name="cvc" class="FormUIInputText" type="tel" required />
         </div>
         <div class="FormRow">
         <Br>

@@ -2933,10 +2933,6 @@ body {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-.ERCGallery .slick-slide {
-  opacity: 0.4;
-  transition: opacity 200ms ease-out;
-}
 .ERCGallery .slick-current {
   opacity: 1;
 }
@@ -3119,8 +3115,7 @@ body {
   background: transparent;
 }
 .ui-datepicker-current-day.ui-datepicker-today .ui-state-highlight.ui-state-default {
-  background: #f00;
-  color: #000;
+  color: #555;
 }
 .ui-datepicker-calendar .ui-state-default {
   background: none;
