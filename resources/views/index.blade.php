@@ -17,6 +17,8 @@
   <div class="Logo linked"><a href="/">...</a></div>
 </header>
 
+<div class="GuideGuide"></div>
+
 <!-- END HEADER PARTIAL FILE -->
 
 <section class="FundADay_Intro">
@@ -41,9 +43,12 @@
         <p class="underlined"><a href="">Learn more about the ERC</a></p>
       </article>
     </div>
+    <div class="column col-xs-12 col-md-6">
+      <div class="ERCGalleryBig"></div>
+    </div>
   </div>
 </section>
-<section class="ERCGallery">
+<section class="ERCGallerySmall">
   <div><img src="_img/slide4.jpg"></div>
   <div><img src="_img/slide3.jpg"></div>
   <div><img src="_img/slide2.jpg"></div>
@@ -64,7 +69,7 @@
 <form id="form-donate">
   <section class="FundADay_WillYouBe NegativeBlock ">
     <div class="row">
-      <div class="column col-xs-12 col-md-6">
+      <div class="column col-xs-12 col-md-5">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <h2 class="SansSerif mb2">89 <span class="Superscript">of</span> 365 days have been funded. Will you fund the 90th?</h2>
         <div class="ChosenDay mb2 mt4">
@@ -72,61 +77,66 @@
           <p class="SansSerif">July 20, 2016</p>
         </div>
       </div>
-      <div class="column col-xs-12 col-md-6 DateDiv">
+      <div class="column col-xs-12 col-md-5 col-md-offset-2 DateDiv">
         <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
       </div>
     </div>
   </section>
   <section class="FundADay_BigForm">
     <div class="row">
-      <div class="column col-xs-12 col-md-6">
-        <label class="DateLabel">Personal Information </label>
-        <div class="FormRow">
-          <label for="d3">Full Name</label>
-          <input id="d3" name="name" class="FormUIInputText" type="text" />
+      <div class="column col-xs-12 col-md-7">
+        <div class="row">
+          <div class="column col-xs-12 col-md-6">
+            <label class="DateLabel">Personal Information</label>
+            <div class="FormRow">
+              <label for="d3">First Name</label> <input class="FormUIInputText" id="d3" name="name" type="text">
+            </div>
+            <div class="FormRow">
+              <label for="d3">Last Name</label> <input class="FormUIInputText" id="d3" name="name" type="text">
+            </div>
+            <div class="FormRow">
+              <label for="d3">Email Address</label> <input class="FormUIInputText" id="d3" name="email" type="email">
+            </div>
+          </div>
+          <div class="column col-xs-12 col-md-6">
+            <label class="DateLabel">Payment</label>
+            <div class="FormRow">
+              <label for="d3">Credit Card #</label> <input class="FormUIInputText" id="d3" name="cc_number" type="tel">
+            </div>
+            <div class="FormRow FormUIExpMonth">
+              <label for="d3">Exp. Month</label> <input class="FormUIInputText" id="d3" name="cc_exp_month" type="tel">
+            </div>
+            <div class="FormRow FormUIExpYear">
+              <label for="d3">Exp. Year</label> <input class="FormUIInputText" id="expyear" name="cc_exp_year" type="tel">
+            </div>
+            <div class="FormRow">
+              <label for="d3">CVV (Security Code)</label> <input class="FormUIInputText" id="d3" name="cvc" type="tel">
+            </div>
+          </div>
+          <div class="column col-xs-12">
+            <div class="FormRow">
+              <br>
+              <p>Note: Once you submit, your card will be immediately charged for $1,500.00 USD, these funds will be used exclusively to fund the day you've chosen.</p>
+              <div id="js-form-response"></div>
+            </div>
+            <div class="FormRow">
+              <button class="FundADay_FormSubmit" type="submit">Give Now</button>
+            </div><input name="is_anonymous" type="hidden" value="0"> <label class="FormUICheckbox FormUICheckbox--checkbox mt4">I’d like my name not to be displayed publicly on this page. <input type="checkbox"></label>
+            <div class="FormUICheckbox__indicator">
+              <label class="FormUICheckbox FormUICheckbox--checkbox mt4"></label>
+            </div>
+          </div>
         </div>
-        <div class="FormRow">
-          <label for="d3">Email Address</label>
-          <input id="d3" name="email" class="FormUIInputText" type="email" />
-        </div>
-        <label class="DateLabel">Payment </label>
-        <div class="FormRow">
-          <label for="d3">Credit Card #</label>
-          <input id="d3" name="cc_number" class="FormUIInputText" type="tel" />
-        </div>
-        <div class="FormRow FormUIExpMonth">
-          <label for="d3">Exp. Month</label>
-          <input id="d3" name="cc_exp_month" class="FormUIInputText" type="tel" />
-        </div>
-        <div class="FormRow FormUIExpYear">
-          <label for="d3">Exp. Year</label>
-          <input id="expyear" name="cc_exp_year" class="FormUIInputText" type="tel" />
-        </div>
-        <div class="FormRow">
-          <label for="d3">CVV (Security Code)</label>
-          <input id="d3" name="cvc" class="FormUIInputText" type="tel" />
-        </div>
-        <div class="FormRow">
-        <Br>
-          <p>Note: Once you submit, your card will be immediately charged for $1,500.00 USD, these funds will be used exclusively to fund the day you've chosen.</p>
-          <div id="js-form-response"></div>
-        </div>
-        <div class="FormRow">
-         <button class="FundADay_FormSubmit" type="submit">Give Now</button>
-        </div>
-        <input name="is_anonymous" type="hidden" value="0">
-        <label class="FormUICheckbox FormUICheckbox--checkbox mt4 ">I’d like my name not to be displayed publicly on this page.
-          <input type="checkbox"/>
-          <div class="FormUICheckbox__indicator"></div>
-        </label>
+      </div>
+      <div class="column col-xs-12 col-md-5 FundADay_Outro">
+        <a href="https://iwantrest.com/">
+        <h2 class="Serif">Understand the problem in Seattle.</h2></a>
+        <hr>
+        <a href="https://iwantrest.com/services">
+        <h2 class="Serif">Learn more about what we do.</h2></a>
+        <p class="underlined">Learn more at <a href="https://iwantrest.com/">iwantrest.com</a>.</p>
       </div>
     </div>
-  </section>
-  <section class="FundADay_Outro">
-    <a href="https://iwantrest.com/"><h2 class="Serif">Understand the problem in Seattle.</h2></a>
-    <hr>
-    <a href="https://iwantrest.com/services"><h2 class="Serif">Learn more about what we do.</h2></a>
-    <p class="underlined">Learn more at <a href="https://iwantrest.com/">iwantrest.com</a>.</p>
   </section>
 </form>
 <script src="/js/all.js"></script>

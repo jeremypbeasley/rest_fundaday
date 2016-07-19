@@ -45,15 +45,23 @@
 .col-md-offset-12
 	padding-right: unit1;
 	padding-left: unit1;
+	@media laptop {
+		padding-left: unit3;
+		padding-right: unit3;
+	}
 	
 .row
 	padding unit2 unit3
 	overflow visible
 	z-index 10
-	margin-left 0px 
-	margin-right 0px
+	// margin-left 0px 
+	// margin-right 0px
 	div
 		z-index 11
+		
+.row .row {
+	margin: 0 -2rem;
+}
 		
 // .column
 // 	overflow-y visible
