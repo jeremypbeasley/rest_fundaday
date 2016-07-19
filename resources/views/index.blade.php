@@ -43,7 +43,7 @@
         <p class="underlined"><a href="">Learn more about the ERC</a></p>
       </article>
     </div>
-    <div class="column col-xs-12 col-md-6">
+    <div class="column col-xs-12 col-md-5 col-md-offset-1">
       <div class="ERCGalleryBig"></div>
     </div>
   </div>
@@ -55,36 +55,98 @@
   <div><img src="_img/slide1.jpg"></div>
   <!-- <div><img src="http://cdn2.dropmark.com/39456/f8652ba5ff68635386f1a26996c89d6cb42db0a4/198033.jpg"></div> -->
 </section >
-<section class="FundADay_FinancialCase NegativeBlock">
+<section class="FundADay_FinancialCase  ">
   <div class="row">
-    <div class="column col-xs-12 col-md-6 col-md-offset-2">
-      <h2 class="Serif pb5">For just $1,500, you can fund the ERC for an entire day.</h2>
-    </div>
-    <div class="column col-xs-12 col-md-4 first-md">
-      <p>It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24/7 live-in staff, food, utlitities, phones, furniture, activities, etc.</p>
+    <div class="column col-xs-12 col-md-5 col-md-offset-2">
+      <h2 class="Serif pb5">For $1,500, you can fund the new ERC for an entire day.</h2>
+      <p class="mt8">It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24/7 live-in staff, food, utlitities, phones, furniture, activities, etc.</p>
       <p class="underlined"><a href="">See the cost breakdown</a></p>
     </div>
+    <div class="column col-xs-12 col-md-3 col-md-offset-2 first-md">
+      <!-- <p>It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24/7 live-in staff, food, utlitities, phones, furniture, activities, etc.</p>
+      <p class="underlined"><a href="">See the cost breakdown</a></p> -->
+    </div>
   </div>
+  <div class="row BlueCont">
+  <div class="col-xs-offset-11 col-xs-1 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class="col-xs-offset-10 col-xs-2 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class="col-xs-offset-9 col-xs-3 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class="col-xs-offset-8 col-xs-4 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class="col-xs-offset-7 col-xs-5 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class="col-xs-offset-6 col-xs-6 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class="col-xs-offset-5 col-xs-7 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class="col-xs-offset-4 col-xs-8 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class="col-xs-offset-3 col-xs-9 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class="col-xs-offset-2 col-xs-10 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class="col-xs-offset-1 col-xs-11 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
+<div class="row BlueCont">
+  <div class=" col-xs-12 Blue">
+    <div class="box-row BlueCont"></div>
+  </div>
+</div>
 </section>
 <form id="form-donate">
   <section class="FundADay_WillYouBe NegativeBlock ">
     <div class="row">
-      <div class="column col-xs-12 col-md-5">
+      <div class="column col-xs-12 col-md-5 col-md-offset-2 Question">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <h2 class="SansSerif mb2">89 <span class="Superscript">of</span> 365 days have been funded. Will you fund the 90th?</h2>
-        <div class="ChosenDay mb2 mt4">
+        <h2 class="SansSerif mb2">89 <!-- <span class="Superscript">of</span> -->of 365 days have been funded. Will you fund the 90th?</h2>
+        <div class="ChosenDay mb2 mt5">
           <p class="SansSerif op50 mt1 mb0">The next unfunded day is</p>
           <p class="SansSerif">July 20, 2016</p>
         </div>
       </div>
-      <div class="column col-xs-12 col-md-5 col-md-offset-2 DateDiv">
+      <div class="column col-xs-12 col-md-4 col-md-offset-1 DateDiv first-md">
         <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
       </div>
     </div>
   </section>
   <section class="FundADay_BigForm">
     <div class="row">
-      <div class="column col-xs-12 col-md-7">
+      <div class="column col-xs-12 col-md-8  col-md-offset-2">
         <div class="row">
           <div class="column col-xs-12 col-md-6">
             <label class="DateLabel">Personal Information</label>
@@ -128,14 +190,14 @@
           </div>
         </div>
       </div>
-      <div class="column col-xs-12 col-md-5 FundADay_Outro">
+      <!-- <div class="column col-xs-12 col-md-4 col-md-offset-1 FundADay_Outro">
         <a href="https://iwantrest.com/">
-        <h2 class="Serif">Understand the problem in Seattle.</h2></a>
+        <h3 class="Serif">Understand the problem in Seattle.</h3></a>
         <hr>
         <a href="https://iwantrest.com/services">
-        <h2 class="Serif">Learn more about what we do.</h2></a>
+        <h3 class="Serif">Learn more about what we do.</h3></a>
         <p class="underlined">Learn more at <a href="https://iwantrest.com/">iwantrest.com</a>.</p>
-      </div>
+      </div> -->
     </div>
   </section>
 </form>

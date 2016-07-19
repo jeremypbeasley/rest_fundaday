@@ -6125,7 +6125,7 @@ function dateCheck(from,to,check) {
 }
 
 function displayChosenDay(chosenDay) {
-  var chosenDayMsg = '<p class="SansSerif mb0 mt1">You’ve chosen ' + chosenDay + '.</p><p class="SansSerif op50">This day is currently unfunded.</p>';
+  var chosenDayMsg = '<p class="SansSerif mb0 mt1">You’ve selected ' + chosenDay + '.</p><p class="SansSerif op50">This day is currently unfunded.</p>';
   $(".ChosenDay").html(chosenDayMsg);
 }
 
@@ -6150,7 +6150,7 @@ $('.DateDiv').datepicker({
 
 // PHOTO CAROUSEL
 
-$('.ERCGallery').slick({
+$('.ERCGallerySmall').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 1,
