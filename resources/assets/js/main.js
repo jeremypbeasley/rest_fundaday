@@ -1,28 +1,3 @@
-
-var testFundedDates = [
-  "2016-06-14",
-  "2016-06-15",
-  "2016-06-16",
-  "2016-07-14",
-  "2016-07-15",
-  "2016-07-16",
-  "2016-07-01",
-  "2016-07-03",
-  "2016-07-21",
-  "2016-07-01",
-  "2016-07-07",
-  "2016-07-21",
-  "2016-07-25",
-  "2016-08-20",
-  "2016-08-02",
-  "2016-08-25",
-];
-
-
-// onSelect: function(date, obj){
-//   $('#date-input').val(date); 
-// }
-
 var headerHtml = $("#material-header-holder .ui-datepicker-material-header");
 
 var changeMaterialHeader = function(header, date) {
@@ -166,15 +141,23 @@ function api_has_loaded(response){
 
   // build the fundedDates array
   var fundedDates = [];
+  var donorNames = {};
   $.each(response.days,function(i,day){
     fundedDates.push(day.day);
+    donorNames[day.day] = day.donor_name;
   });
 
   // start the Datepicker
   $('.DateDiv').datepicker({
     beforeShowDay: function(date){
       var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-      return [ fundedDates.indexOf(string) == -1,"" ];
+      var donor_name = null;
+      var is_selectable = true;
+      if(fundedDates.indexOf(string) != -1){
+        is_selectable = false;
+        donor_name = donorNames[string];
+      }
+      return [is_selectable,"",donor_name];
     },
     dateFormat:'yy-mm-dd',
     maxDate:'2017-07-31',
