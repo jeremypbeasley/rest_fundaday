@@ -186,21 +186,22 @@ function api_has_loaded(response){
 // Donate Form
 var DonateForm = {
   init:function(){
-    $('#form-donate').validate();
-    // bind events (form submit)
-    this.bindEvents();
-  },
-  bindEvents:function(){
-    $('body').on('submit','#form-donate',this.submitForm);
+    $('#form-donate').validate({
+      submitHandler:function(f,e){
+        DonateForm.submitForm(e);
+      }
+    });
   },
   submitForm:function(e){
     e.preventDefault();
-    var $form = $(this);
+    var $form = $('#form-donate');
+    $form.addClass('form-is-loading');
     var form_data = $form.serialize();
     $.post('/api/days',form_data,function(response){
       window.location.href = "/thank-you/"+response.id;
     }).fail(function(response){
       console.log(response);
+      $form.removeClass('form-is-loading');
       var error = "There was an error";
       if(response.status == 422){
         // validation errors

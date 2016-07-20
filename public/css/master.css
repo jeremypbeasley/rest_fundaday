@@ -3237,6 +3237,10 @@ input::-moz-focus-inner {
   padding: 1.4rem 1rem;
   text-align: center;
 }
+.form-is-loading .FundADay_FormSubmit {
+  background: #000;
+  color: #555;
+}
 .FormUICheckbox {
   display: block;
   position: relative;
