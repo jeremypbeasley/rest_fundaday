@@ -20,7 +20,6 @@ elixir(function(mix) {
         'jquery.validate.min.js',
         'slick.js',
         'moment.js',
-        'main.js',
-        'api.js'
+        'main.js'
     ]);
 });

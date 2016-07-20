@@ -9,6 +9,16 @@
   <link href="/css/master.css" rel="stylesheet">
 </head>
 <body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29157146-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
 <header>
   <div class="logo linked"><a href="/">...</a></div>
 </header>
@@ -65,7 +75,7 @@
         <h2 class="SansSerif mb2"><span id="js-total-days-funded">89</span> <span class="Superscript">of</span> 365 days have been funded. Will you fund the <span id="js-total-days-funded-next">90th</span>?</h2>
         <div class="ChosenDay mb2 mt4">
           <p class="SansSerif op50 mt1 mb0">The next unfunded day is</p>
-          <p class="SansSerif">July 20, 2016</h2>
+          <p class="SansSerif"><span id="js-next-unfunded-date-formatted">July 20, 2016</span></h2>
         </div>
         <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
       </div>
@@ -123,15 +133,5 @@
   </section>
 </form>
 <script src="/js/all.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-29157146-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </body>
 </html>

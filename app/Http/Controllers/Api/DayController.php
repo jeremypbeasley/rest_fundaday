@@ -55,7 +55,7 @@ class DayController extends Controller
                     // if this day has been funded - try the next day
                     $next_unfunded_date->addDay();
                 }
-                else{
+                elseif(strtotime($day->day) > strtotime($next_unfunded_date->format('Y-m-d'))) {
                     // else - we found our date!
                     $found_unfunded_date = true;
                 }
@@ -75,7 +75,7 @@ class DayController extends Controller
         }
 
         if($found_unfunded_date){
-            $return_data['next_unfunded_date'] = $next_unfunded_date->format('m/d/Y');
+            $return_data['next_unfunded_date'] = $next_unfunded_date->format('Y-m-d');
         }
 
         return response()->json($return_data);

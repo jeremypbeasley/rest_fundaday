@@ -1,5 +1,5 @@
 
-var fundedDates = [
+var testFundedDates = [
   "2016-06-14",
   "2016-06-15",
   "2016-06-16",
@@ -17,9 +17,6 @@ var fundedDates = [
   "2016-08-02",
   "2016-08-25",
 ];
-
-
-
 
 
 // onSelect: function(date, obj){
@@ -132,27 +129,10 @@ function dateCheck(from,to,check) {
 }
 
 function displayChosenDay(chosenDay) {
-  var chosenDayMsg = '<p class="SansSerif mb0 mt1">You’ve chosen ' + chosenDay + '.</p><p class="SansSerif op50">This day is currently unfunded.</p>';
+  var chosenDate = moment(chosenDay,'YYYY-MM-DD');
+  var chosenDayMsg = '<p class="SansSerif mb0 mt1">You’ve chosen ' + chosenDate.format('MMMM D, YYYY') + '.</p><p class="SansSerif op50">This day is currently unfunded.</p>';
   $(".ChosenDay").html(chosenDayMsg);
 }
-
-$('.DateDiv').datepicker({
-  beforeShowDay: function(date){
-    var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-    return [ fundedDates.indexOf(string) == -1,"" ];
-    console.log(string);
-  },
-  dateFormat:'MM dd, yy',
-  onSelect: function(dateText, obj){
-    $('#date-input').val(dateText); 
-  },
-  onSelect: function(dateText, obj){
-    var date = $(this).val();
-    displayChosenDay(date);
-    var woahdate = $('.DateDiv').datepicker({ dateFormat: 'mm-dd-yy' }).val();
-    console.log(woahdate);
-  }
-});
 
 
 // PHOTO CAROUSEL
@@ -164,3 +144,99 @@ $('.ERCGallery').slick({
   centerMode: false,
   variableWidth: true
 });
+
+/**************************************
+  API and DONATE FORM
+***************************************/
+
+// Load the API
+function getOrdinal(n) {
+  var s=["th","st","nd","rd"],
+     v=n%100;
+  return n+(s[(v-20)%10]||s[v]||s[0]);
+}
+
+function api_has_loaded(response){
+  console.log(response);
+
+  // Set the # days have been funded text
+  var total = response.total_days;
+  $('#js-total-days-funded').text(total);
+  $('#js-total-days-funded-next').text(getOrdinal(total+1));
+
+  // build the fundedDates array
+  var fundedDates = [];
+  $.each(response.days,function(i,day){
+    fundedDates.push(day.day);
+  });
+
+  // start the Datepicker
+  $('.DateDiv').datepicker({
+    beforeShowDay: function(date){
+      var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+      return [ fundedDates.indexOf(string) == -1,"" ];
+    },
+    dateFormat:'yy-mm-dd',
+    maxDate:'2017-07-31',
+    onSelect: function(dateText, obj){
+      var date = $(this).val();
+      $('#date-input').val(date); 
+      displayChosenDay(date);
+    }
+  });
+
+  // Set the next unfunded date
+  if(response.next_unfunded_date){
+    // get the date from the api response and translate it into moment object
+    var next_unfunded_date = moment(response.next_unfunded_date,'YYYY-MM-DD');
+    // set the formatted text string like July 25, 2016
+    $('#js-next-unfunded-date-formatted').text(next_unfunded_date.format('MMMM D, YYYY'));
+    // Set the datepicker date
+    $('.DateDiv').datepicker('setDate',next_unfunded_date.format('YYYY-MM-DD'));
+    // Set the input
+    $('#date-input').val(next_unfunded_date.format('YYYY-MM-DD'));
+  }
+
+
+}
+
+// Donate Form
+var DonateForm = {
+  init:function(){
+    $('#form-donate').validate();
+    // bind events (form submit)
+    this.bindEvents();
+  },
+  bindEvents:function(){
+    $('body').on('submit','#form-donate',this.submitForm);
+  },
+  submitForm:function(e){
+    e.preventDefault();
+    var $form = $(this);
+    var form_data = $form.serialize();
+    $.post('/api/days',form_data,function(response){
+      window.location.href = "/thank-you/"+response.id;
+    }).fail(function(response){
+      console.log(response);
+      var error = "There was an error";
+      if(response.status == 422){
+        // validation errors
+        error = "All fields are required";
+      }
+      $('#js-form-response').text(error).css('color','red');
+    });
+  }
+};
+
+
+$(document).ready(function() {
+  // get total num days from API
+  $.get('/api/days',null,api_has_loaded);
+
+  // Initialize the Donate Form
+  DonateForm.init();
+});
+
+
+
+
