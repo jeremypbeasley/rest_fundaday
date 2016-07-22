@@ -45,16 +45,36 @@
 .col-md-offset-12
 	padding-right: unit1;
 	padding-left: unit1;
+	@media laptop {
+		padding-left: unit3;
+		padding-right: unit3;
+	}
 	
 .row
 	padding unit2 unit3
 	overflow visible
 	z-index 10
-	margin-left 0px 
-	margin-right 0px
+	// margin-left 0px 
+	// margin-right 0px
 	div
 		z-index 11
 		
+.row .row {
+	margin: 0 -2rem;
+}
+
+
+// .row {
+// 	background-color: hsla(334, 100%, 50%, .5)
+// }
+// .column {
+// 	background-color: hsla(100, 100%, 50%, .5)
+// }
+// p, h2, a  {
+// 	background-color: hsla(50, 100%, 100%, 1);
+// }		
+
+
 // .column
 // 	overflow-y visible
 // 	margin-bottom 11vw

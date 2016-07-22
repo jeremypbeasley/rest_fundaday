@@ -2688,15 +2688,48 @@ body .ui-tooltip {
   padding-right: 8px;
   padding-left: 8px;
 }
+@media (min-width: 62em) {
+  .column,
+  .col-xs-12,
+  .col-md,
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12,
+  .col-md-offset-1,
+  .col-md-offset-2,
+  .col-md-offset-3,
+  .col-md-offset-4,
+  .col-md-offset-5,
+  .col-md-offset-6,
+  .col-md-offset-7,
+  .col-md-offset-8,
+  .col-md-offset-9,
+  .col-md-offset-10,
+  .col-md-offset-11,
+  .col-md-offset-12 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 .row {
   padding: 16px 24px;
   overflow: visible;
   z-index: 10;
-  margin-left: 0px;
-  margin-right: 0px;
 }
 .row div {
   z-index: 11;
+}
+.row .row {
+  margin: 0 -2rem;
 }
 html {
   font-size: 15px;
@@ -2797,13 +2830,23 @@ h2 {
   font-size: 2.2rem;
   margin-top: -0.25em;
 }
-h3,
-h4 {
-  font-size: 1rem;
+@media (min-width: 62em) {
+  h2 {
+    font-size: 50px;
+    font-size: 3.5vw;
+  }
+}
+h3 {
+  font-size: 2.2rem;
+  margin-top: -0.25em;
+}
+@media (min-width: 62em) {
+  h3 {
+    font-size: 2.75vw;
+  }
 }
 span.Superscript {
   font-size: 0.5em;
-/* font-style: italic; */
   margin-top: -0.5em;
   position: relative;
   top: -0.4em;
@@ -2839,7 +2882,7 @@ body {
   display: none;
   opacity: 0;
 }
-.logo {
+.Logo {
   width: 5rem;
   height: 2.5rem;
   background: url("../_img/rest_logo_outline.svg") no-repeat;
@@ -2854,14 +2897,37 @@ body {
   top: 32px;
   left: 32px;
 }
+@media (min-width: 62em) {
+  .Logo {
+    position: absolute;
+    top: calc(7vw + 32px);
+    left: calc(57vw + 32px);
+  }
+}
 .column {
   position: relative;
+}
+@media (min-width: 62em) {
+  .FundADay_Intro {
+    min-height: 100vh;
+    position: relative;
+  }
 }
 .FundADay_Intro .column {
   margin-top: 25vw;
 }
+@media (min-width: 62em) {
+  .FundADay_Intro .column {
+    margin-top: 25vh;
+  }
+}
 .FundADay_Intro h2 {
-  padding: 88px 0;
+  padding: 20vh 0;
+}
+@media (min-width: 62em) {
+  .FundADay_Intro h2 {
+    padding: 0;
+  }
 }
 .FundADay_BigPhoto {
   height: 80vh;
@@ -2870,6 +2936,16 @@ body {
   background-position: 20% center;
   background-image: url("../_img/blog_donatebg_desktop.jpg");
   background-repeat: no-repeat;
+}
+@media (min-width: 62em) {
+  .FundADay_BigPhoto {
+    position: absolute;
+    top: 0vw;
+    left: -10vw;
+    height: 60vw;
+    width: 55vw;
+    transform: rotate(9deg);
+  }
 }
 .NegativeBlock,
 .NegativeBlock h1,
@@ -2883,17 +2959,54 @@ body {
 .FundADay_WhatIsERC {
   padding: 24px 0 8px 0;
 }
+@media (min-width: 62em) {
+  .FundADay_WhatIsERC {
+    padding: 7vw;
+  }
+}
 .FundADay_FinancialCase {
   background-size: 600%;
   background-position: center center;
-  background-color: #dc4405;
-  background-image: url("https://iwantrest.com/_img/featphoto_home.jpg");
   padding: 24px 0 0 0;
   margin-bottom: -1rem;
+}
+@media (min-width: 62em) {
+  .FundADay_FinancialCase {
+    padding: 7vw;
+    min-height: 80vh;
+    background-size: cover;
+  }
+}
+@media (min-width: 62em) {
+  .FundADay_FinancialCase .row {
+    margin-top: 13vh;
+  }
+}
+@media (min-width: 62em) {
+  .FundADay_FinancialCase h2 {
+    padding-bottom: 0px;
+    margin-bottom: -0.5em;
+  }
 }
 .FundADay_WillYouBe {
   background: #000;
   padding: 16px 0 0 0;
+}
+@media (min-width: 62em) {
+  .FundADay_WillYouBe {
+    padding: 7vw;
+    min-height: 80vh;
+  }
+}
+@media (min-width: 62em) {
+  .FundADay_WillYouBe .DateDiv {
+    margin-top: 10vh;
+  }
+}
+@media (min-width: 62em) {
+  .FundADay_WillYouBe .Question {
+    margin-top: 15vh;
+  }
 }
 .FundADay_BigForm {
   border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -2902,6 +3015,11 @@ body {
 .FundADay_Outro {
   padding: 80px 40px;
   text-align: center;
+}
+@media (min-width: 62em) {
+  .FundADay_Outro {
+    text-align: left;
+  }
 }
 .FundADay_Outro hr {
   width: 50%;
@@ -2915,26 +3033,55 @@ body {
   text-align: center;
   padding-top: 48px;
 }
-.ERCGallery {
+@media (min-width: 62em) {
+  .FundADay_Outro p {
+    text-align: left;
+  }
+}
+.ERCGallerySmall {
   width: 100%;
   background: #000;
   max-height: 90vw;
   overflow: hidden;
 }
-.ERCGallery button,
-.ERCGallery ul {
+@media (min-width: 62em) {
+  .ERCGallerySmall {
+    display: none;
+  }
+}
+.ERCGallerySmall button,
+.ERCGallerySmall ul {
   display: none !important;
 }
-.ERCGallery img {
+.ERCGallerySmall img {
   max-height: 90vw;
 }
-.ERCGallery img {
+.ERCGallerySmall img {
   max-width: 100%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-.ERCGallery .slick-current {
+.ERCGallerySmall .slick-current {
   opacity: 1;
+}
+.ERCGalleryBig {
+  display: none;
+}
+@media (min-width: 62em) {
+  .ERCGalleryBig {
+    display: block;
+    width: 100%;
+    height: 50vh;
+    background: url("../_img/gallery.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 20vh;
+  }
+}
+@media (min-width: 62em) {
+  section {
+    padding: 7vw;
+  }
 }
 .DateLabel {
   width: 100%;
@@ -3005,7 +3152,7 @@ body {
   width: 10px;
   height: 10px;
   color: #00af66;
-  background-image: url("../_img/ic_check_white_24px.svg");
+  background-image: url("http://fund-a-day.iwantrest.com/_img/ic_check_white_24px.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
@@ -3220,13 +3367,6 @@ input::-moz-focus-inner {
   font-size: 11px;
   opacity: 0.4;
 }
-.FormRow label.error {
-  color: #f56b3d;
-  width: 100%;
-  max-width: 320px;
-  text-align: right;
-  padding-right: 25px;
-}
 .FundADay_FormSubmit {
   width: 100%;
   background: #dc4405;
@@ -3236,10 +3376,6 @@ input::-moz-focus-inner {
   border-radius: 0px;
   padding: 1.4rem 1rem;
   text-align: center;
-}
-.form-is-loading .FundADay_FormSubmit {
-  background: #000;
-  color: #555;
 }
 .FormUICheckbox {
   display: block;
@@ -3306,7 +3442,6 @@ input::-moz-focus-inner {
   font-size: 15px;
   color: #000;
   background-color: #fff;
-  max-width: 320px;
   border: 1px solid #000;
   border-radius: 0px;
   -webkit-appearance: none;
@@ -3333,6 +3468,16 @@ input::-moz-focus-inner {
     opacity: 1;
     transform: scale(1) rotate(45deg);
   }
+}
+.Blue {
+  background: #00f;
+  height: 1px;
+  margin-bottom: -100px;
+}
+.BlueCont {
+  background: #000;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 /*# sourceMappingURL=master.css.map */
