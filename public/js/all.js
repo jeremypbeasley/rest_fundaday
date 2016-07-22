@@ -6129,7 +6129,7 @@ function getOrdinal(n) {
 }
 
 function api_has_loaded(response){
-  console.log(response);
+  //console.log(response);
 
   // Set the # days have been funded text
   var total = response.total_days;
@@ -6197,7 +6197,7 @@ var DonateForm = {
     $.post('/api/days',form_data,function(response){
       window.location.href = "/thank-you/"+response.id;
     }).fail(function(response){
-      console.log(response);
+      //console.log(response);
       $form.removeClass('form-is-loading');
       var error = "There was an error";
       if(response.status == 422){

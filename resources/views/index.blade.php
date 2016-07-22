@@ -1,7 +1,3 @@
-
-
-  
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +9,16 @@
   <link href="/css/master.css" rel="stylesheet">
 </head>
 <body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29157146-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
 <header>
   <div class="Logo linked"><a href="/">...</a></div>
 </header>
@@ -75,10 +81,10 @@
     <div class="row">
       <div class="column col-xs-12 col-md-5 Question">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <h2 class="SansSerif mb2">89 <!-- <span class="Superscript">of</span> -->of 365 days have been funded. Will you fund the 90th?</h2>
+        <h2 class="SansSerif mb2"><span id="js-total-days-funded">89</span> <!-- <span class="Superscript">of</span> -->of 365 days have been funded. Will you fund the <span id="js-total-days-funded-next">90th</span>?</h2>
         <div class="ChosenDay mb2 mt5">
           <p class="SansSerif op50 mt1 mb0">The next unfunded day is</p>
-          <p class="SansSerif">July 20, 2016</p>
+          <p class="SansSerif"><span id="js-next-unfunded-date-formatted">August 1, 2016</span></p>
         </div>
       </div>
       <div class="column col-xs-12 col-md-4 col-md-offset-2 DateDiv">
@@ -93,28 +99,28 @@
           <div class="column col-xs-12 col-md-6">
             <label class="DateLabel">Personal Information</label>
             <div class="FormRow">
-              <label for="d3">First Name</label> <input class="FormUIInputText" id="d3" name="name" type="text">
+              <label for="input-first-name">First Name</label> <input class="FormUIInputText" id="input-first-name" name="first_name" required data-msg="*" type="text">
             </div>
             <div class="FormRow">
-              <label for="d3">Last Name</label> <input class="FormUIInputText" id="d3" name="name" type="text">
+              <label for="input-last-name">Last Name</label> <input class="FormUIInputText" id="input-last-name" name="last_name" required data-msg="*" type="text">
             </div>
             <div class="FormRow">
-              <label for="d3">Email Address</label> <input class="FormUIInputText" id="d3" name="email" type="email">
+              <label for="input-email">Email Address</label> <input class="FormUIInputText" id="input-email" name="email" required data-msg="*" type="email">
             </div>
           </div>
           <div class="column col-xs-12 col-md-6">
             <label class="DateLabel">Payment</label>
             <div class="FormRow">
-              <label for="d3">Credit Card #</label> <input class="FormUIInputText" id="d3" name="cc_number" type="tel">
+              <label for="input-ccnumber">Credit Card #</label> <input class="FormUIInputText" id="input-ccnumber" name="cc_number" required data-msg="*" type="tel">
             </div>
             <div class="FormRow FormUIExpMonth">
-              <label for="d3">Exp. Month</label> <input class="FormUIInputText" id="d3" name="cc_exp_month" type="tel">
+              <label for="input-ccexpmonth">Exp. Month</label> <input class="FormUIInputText" id="input-ccexpmonth" name="cc_exp_month" required data-msg="*" type="tel">
             </div>
             <div class="FormRow FormUIExpYear">
-              <label for="d3">Exp. Year</label> <input class="FormUIInputText" id="expyear" name="cc_exp_year" type="tel">
+              <label for="expyear">Exp. Year</label> <input class="FormUIInputText" id="expyear" name="cc_exp_year" required data-msg="*" type="tel">
             </div>
             <div class="FormRow">
-              <label for="d3">CVV (Security Code)</label> <input class="FormUIInputText" id="d3" name="cvc" type="tel">
+              <label for="input-cvc">CVV (Security Code)</label> <input class="FormUIInputText" id="input-cvc" name="cvc" required data-msg="*" type="tel">
             </div>
           </div>
           <div class="column col-xs-12">
@@ -144,15 +150,6 @@
   </section>
 </form>
 <script src="/js/all.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-29157146-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </body>
 </html>

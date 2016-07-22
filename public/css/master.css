@@ -3152,7 +3152,7 @@ body {
   width: 10px;
   height: 10px;
   color: #00af66;
-  background-image: url("http://fund-a-day.iwantrest.com/_img/ic_check_white_24px.svg");
+  background-image: url("../_img/ic_check_white_24px.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
@@ -3359,6 +3359,11 @@ input::-moz-focus-inner {
   cursor: text;
   z-index: 999;
 }
+.FormRow label.error {
+  left: 5px;
+  color: #dc4405;
+  font-size: 20px;
+}
 .FormRow.active input {
   padding-left: 15px;
 }
@@ -3366,6 +3371,9 @@ input::-moz-focus-inner {
   top: 11px;
   font-size: 11px;
   opacity: 0.4;
+}
+.FormRow.active label.error {
+  font-size: 16px;
 }
 .FundADay_FormSubmit {
   width: 100%;

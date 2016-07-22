@@ -92,7 +92,8 @@ class DayController extends Controller
         // Validate Input
         $this->validate($request, [
             'day'=>'required',
-            'name'=>'required',
+            'first_name'=>'required',
+            'last_name'=>'required',
             'email'=>'email|required',
             'cc_number'=>'required',
             'cc_exp_month'=>'required',
@@ -179,7 +180,7 @@ class DayController extends Controller
         try {
             $day = new Day;
             $day->day = $input["day"];
-            $day->donor_name = $input["name"];
+            $day->donor_name = $input["first_name"].' '.$input["last_name"];
             $day->donor_email = $input["email"];
             $day->is_anonymous = $input["is_anonymous"];
             $day->stripe_charge_id = $charge['id'];
