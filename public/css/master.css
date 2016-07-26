@@ -2556,6 +2556,72 @@ body .ui-tooltip {
 .mt10 {
   margin-top: 80px;
 }
+.ml0 {
+  margin-left: 4px;
+}
+.ml1 {
+  margin-left: 8px;
+}
+.ml2 {
+  margin-left: 16px;
+}
+.ml3 {
+  margin-left: 24px;
+}
+.ml4 {
+  margin-left: 32px;
+}
+.ml5 {
+  margin-left: 40px;
+}
+.ml6 {
+  margin-left: 48px;
+}
+.ml7 {
+  margin-left: 56px;
+}
+.ml8 {
+  margin-left: 64px;
+}
+.ml9 {
+  margin-left: 72px;
+}
+.ml10 {
+  margin-left: 80px;
+}
+.mr0 {
+  margin-right: 4px;
+}
+.mr1 {
+  margin-right: 8px;
+}
+.mr2 {
+  margin-right: 16px;
+}
+.mr3 {
+  margin-right: 24px;
+}
+.mr4 {
+  margin-right: 32px;
+}
+.mr5 {
+  margin-right: 40px;
+}
+.mr6 {
+  margin-right: 48px;
+}
+.mr7 {
+  margin-right: 56px;
+}
+.mr8 {
+  margin-right: 64px;
+}
+.mr9 {
+  margin-right: 72px;
+}
+.mt10 {
+  margin-right: 80px;
+}
 .pb0 {
   padding-bottom: 4px;
 }
@@ -2757,7 +2823,7 @@ p {
 p a {
   border-bottom: 1px solid #000;
 }
-p.SansSerif {
+.SansSerif {
   font-family: CircularStdBook, CircularStdBold, sans-serif;
 }
 .col-md-4 p {
@@ -2907,6 +2973,9 @@ body {
 .column {
   position: relative;
 }
+.FundADay_Intro {
+  padding: 0 16px;
+}
 @media (min-width: 62em) {
   .FundADay_Intro {
     min-height: 100vh;
@@ -2923,11 +2992,6 @@ body {
 }
 .FundADay_Intro h2 {
   padding: 20vh 0;
-}
-@media (min-width: 62em) {
-  .FundADay_Intro h2 {
-    padding: 0;
-  }
 }
 .FundADay_BigPhoto {
   height: 80vh;
@@ -2957,7 +3021,7 @@ body {
   border-color: #fff;
 }
 .FundADay_WhatIsERC {
-  padding: 24px 0 8px 0;
+  padding: 24px 16px 8px 16px;
 }
 @media (min-width: 62em) {
   .FundADay_WhatIsERC {
@@ -2967,7 +3031,7 @@ body {
 .FundADay_FinancialCase {
   background-size: 600%;
   background-position: center center;
-  padding: 24px 0 0 0;
+  padding: 0 16px;
   margin-bottom: -1rem;
 }
 @media (min-width: 62em) {
@@ -2990,7 +3054,8 @@ body {
 }
 .FundADay_WillYouBe {
   background: #000;
-  padding: 16px 0 0 0;
+  padding: 16px 16px;
+  transition: height 200ms ease-out;
 }
 @media (min-width: 62em) {
   .FundADay_WillYouBe {
@@ -3000,7 +3065,7 @@ body {
 }
 @media (min-width: 62em) {
   .FundADay_WillYouBe .DateDiv {
-    margin-top: 10vh;
+    margin-top: 5vh;
   }
 }
 @media (min-width: 62em) {
@@ -3011,15 +3076,17 @@ body {
 .FundADay_BigForm {
   border-bottom: 1px solid rgba(0,0,0,0.2);
   padding-bottom: 16px;
+  padding: 0 16px;
+}
+@media (min-width: 62em) {
+  .FundADay_BigForm {
+    padding: 7vw;
+    border-bottom: none;
+  }
 }
 .FundADay_Outro {
   padding: 80px 40px;
   text-align: center;
-}
-@media (min-width: 62em) {
-  .FundADay_Outro {
-    text-align: left;
-  }
 }
 .FundADay_Outro hr {
   width: 50%;
@@ -3032,11 +3099,6 @@ body {
 .FundADay_Outro p {
   text-align: center;
   padding-top: 48px;
-}
-@media (min-width: 62em) {
-  .FundADay_Outro p {
-    text-align: left;
-  }
 }
 .ERCGallerySmall {
   width: 100%;
@@ -3102,8 +3164,40 @@ body {
   font-family: CircularStdBook;
   display: none;
 }
+.ChosenDay {
+  border-left: solid 1px rgba(255,255,255,0.3);
+  border-right: solid 1px rgba(255,255,255,0.3);
+  border-top: solid 1px rgba(255,255,255,0.3);
+}
+.ChosenDay p {
+  margin: 0px;
+}
+.ChosenDay .DayDesc {
+  display: inline-block;
+  vertical-align: top;
+  color: rgba(255,255,255,0.5);
+  height: 3rem;
+}
+.ChosenDay .ActualDay {
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+}
+.ui-datepicker {
+  padding: 0;
+  border: none;
+  width: 100%;
+  background: #000;
+  margin-bottom: -20px;
+  transition: height 200ms ease-out;
+}
 .ui-datepicker-header {
   cursor: pointer;
+  border-left: solid 1px rgba(255,255,255,0.3);
+  border-right: solid 1px rgba(255,255,255,0.3);
+  border-bottom: none;
+  border-top: none;
+  margin-bottom: 0px;
 }
 .ui-datepicker-next-hover.ui-state-hover {
   background-color: #000 !important;
@@ -3117,10 +3211,25 @@ body {
   top: 2px;
   opacity: 0.5;
 }
-.ui-datepicker,
-.ui-datepicker-material-header {
-  background: #f00;
-  font-family: CircularStdBook, Roboto, Arial;
+.ui-datepicker-header {
+  text-align: center;
+  background: #000;
+  padding-bottom: 20px;
+  font-weight: 300;
+  color: #fff;
+}
+.ui-datepicker-header .ui-datepicker-prev,
+.ui-datepicker-header .ui-datepicker-next,
+.ui-datepicker-header .ui-datepicker-title {
+  border: none;
+  outline: none;
+  margin: 5px;
+}
+.ui-datepicker-prev.ui-state-hover,
+.ui-datepicker-next.ui-state-hover {
+  border: none;
+  outline: none;
+  background: #b4cbe5;
 }
 .ui-icon-circle-triangle-w {
   border-radius: 100%;
@@ -3134,10 +3243,20 @@ body {
   background-size: 150%;
   background-position: center center;
 }
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  margin-left: 5px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  margin-right: 5px;
+}
 .ui-widget-content .ui-state-disabled {
   opacity: 1;
   color: #00af66;
   color: #000;
+}
+.ui-datepicker,
+.ui-datepicker-material-header {
+  font-family: CircularStdBook, Roboto, Arial;
 }
 .ui-widget-content .ui-state-disabled span {
   color: #00af66;
@@ -3198,51 +3317,13 @@ body {
   font-weight: 200;
   color: rgba(255,255,255,0.4);
 }
-.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
-  margin-left: -12px;
-}
-.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
-  margin-right: -12px;
-}
-.ui-datepicker {
-  padding: 0;
-  border: none;
-  width: 100%;
-  background: #000;
-  min-height: 333px;
-  margin-bottom: -10px;
-}
 .ui-corner-all {
   border-radius: 0;
-}
-.ui-widget-header {
-  border: 0;
-}
-.ui-datepicker-header {
-  text-align: center;
-  background: #000;
-  padding-bottom: 20px;
-  margin-bottom: 10px;
-  font-weight: 300;
-  color: #fff;
-}
-.ui-datepicker-header .ui-datepicker-prev,
-.ui-datepicker-header .ui-datepicker-next,
-.ui-datepicker-header .ui-datepicker-title {
-  border: none;
-  outline: none;
-  margin: 5px;
-}
-.ui-datepicker-prev.ui-state-hover,
-.ui-datepicker-next.ui-state-hover {
-  border: none;
-  outline: none;
-  background: #b4cbe5;
 }
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-  color: sla(255, 100%, 100%, 0.3);
+  color: rgba(255,255,255,0.3);
 }
 .ui-datepicker-calendar thead {
   display: none;
