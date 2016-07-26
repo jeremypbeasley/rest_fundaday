@@ -105,10 +105,9 @@ function dateCheck(from,to,check) {
 
 function displayChosenDay(chosenDay) {
   var chosenDate = moment(chosenDay,'YYYY-MM-DD');
-  var chosenDayMsg = '<p class="SansSerif mb0 mt1">You’ve chosen ' + chosenDate.format('MMMM D, YYYY') + '.</p><p class="SansSerif op50">This day is currently unfunded.</p>';
+  var chosenDayMsg = '<div class="SansSerif DayDesc mt3 mr2 mb0 ml3">You’ve chosen:</div><div class="SansSerif ActualDay mt3 mr3 mb0">' + chosenDate.format('MMMM D, YYYY') + '</div>';
   $(".ChosenDay").html(chosenDayMsg);
 }
-
 
 // PHOTO CAROUSEL
 

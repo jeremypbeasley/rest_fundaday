@@ -29,13 +29,12 @@
     </div>
   </div>
 </section>
-<section class="ERCGallerySmall">
+<!-- <section class="ERCGallerySmall">
   <div><img src="_img/slide4.jpg"></div>
   <div><img src="_img/slide3.jpg"></div>
   <div><img src="_img/slide2.jpg"></div>
   <div><img src="_img/slide1.jpg"></div>
-  <!-- <div><img src="http://cdn2.dropmark.com/39456/f8652ba5ff68635386f1a26996c89d6cb42db0a4/198033.jpg"></div> -->
-</section >
+</section > -->
 <section class="FundADay_FinancialCase  ">
   <div class="row">
     <div class="column col-xs-12 col-md-4 col-md-offset-4">
@@ -57,19 +56,19 @@
       <div class="column col-xs-12 col-md-5 Question">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <h2 class="SansSerif mb2"><span id="js-total-days-funded">89</span> <!-- <span class="Superscript">of</span> -->of 365 days have been funded. Will you fund the <span id="js-total-days-funded-next">90th</span>?</h2>
-        <div class="ChosenDay mb2 mt5">
-          <p class="SansSerif op50 mt1 mb0">The next unfunded day is</p>
-          <p class="SansSerif"><span id="js-next-unfunded-date-formatted">August 1, 2016</span></p>
-        </div>
       </div>
-      <div class="column col-xs-12 col-md-4 col-md-offset-2 DateDiv">
+      <div class="column col-xs-12 col-md-5 col-md-offset-2 DateDiv">
+        <div class="ChosenDay pb1">
+          <div class="SansSerif DayDesc mt3 mr2 mb0 ml3">Next unfunded day:</div>
+          <div class="SansSerif ActualDay mt3 mr3 mb0"><span id="js-next-unfunded-date-formatted"></span></div>
+        </div>
         <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
       </div>
     </div>
   </section>
   <section class="FundADay_BigForm">
     <div class="row">
-      <div class="column col-xs-12 col-md-6">
+      <div class="column col-xs-12 col-md-7">
         <div class="row">
           <div class="column col-xs-12 col-md-6">
             <label class="DateLabel">Personal Information</label>
@@ -100,16 +99,19 @@
           </div>
           <div class="column col-xs-12">
             <div class="FormRow">
-              <br>
-              <p>Note: Once you submit, your card will be immediately charged for $1,500.00 USD, these funds will be used exclusively to fund the day you've chosen.</p>
+              <p class="mt1">Note: Once you submit, your card will be immediately charged for $1,500 USD, these funds will be used exclusively to fund the day you've chosen.</p>
               <div id="js-form-response"></div>
             </div>
             <div class="FormRow">
               <button class="FundADay_FormSubmit" type="submit">Give Now</button>
-            </div><input name="is_anonymous" type="hidden" value="0"> <label class="FormUICheckbox FormUICheckbox--checkbox mt4">I’d like my name not to be displayed publicly on this page. <input type="checkbox"></label>
-            <div class="FormUICheckbox__indicator">
-              <label class="FormUICheckbox FormUICheckbox--checkbox mt4"></label>
-            </div>
+            </div><input name="is_anonymous" type="hidden" value="0"> 
+            <label class="FormUICheckbox FormUICheckbox--checkbox mt4">
+              I’d like my name not to be displayed publicly on this page. 
+              <input type="checkbox">
+              <div class="FormUICheckbox__indicator">
+                <label class="FormUICheckbox FormUICheckbox--checkbox mt4"></label>
+              </div>
+            </label>
           </div>
         </div>
       </div>
