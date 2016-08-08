@@ -7,7 +7,7 @@
     <!-- <div class="BigPhoto Intro"></div> -->
     <div class="column col-xs-12 col-md-5 col-md-offset-7">
       <article class="CenterBlock">
-        <h2 class="Serif">Seattle needs a place where a young woman can safely escape a life that abuses or exploits her.</h2>
+        <h2 class="Serif">Seattle needs a safe place where a young woman can escape a life that abuses and exploits her.</h2>
       </article>
     </div>
   </div>
@@ -21,11 +21,11 @@
         <h2 class="SansSerif pb5 WeNeedYourHelp"></h2>
         <p>Last year, there were no beds available in King County for nearly 40% of women who contacted REST for a place to stay. </p>
         <p>The ERC will provide up to 7 girls 30 days of emergency housing, intensive case management, and daytime programming to help guests begin to stabilize and consider what life free from exploitation looks and feels like.</p>
-        <p class="underlined"><a href="">Learn more about the ERC</a></p>
+        <!-- <p class="underlined"><a href="">Learn more about the ERC</a></p> -->
       </article>
     </div>
     <div class="column col-xs-12 col-md-5 col-md-offset-1">
-      <div class="ERCGalleryBig"></div>
+      <img class="FundADay_BigPhoto2" src="_img/slide4.jpg">
     </div>
   </div>
 </section>
@@ -37,16 +37,15 @@
 </section > -->
 <section class="FundADay_FinancialCase  ">
   <div class="row">
-    <div class="column col-xs-12 col-md-4 col-md-offset-4">
+    <div class="column col-xs-12 col-md-4">
       <h2 class="Serif pb5">For $1,500, you can fund the new ERC for an entire day.</h2>
     </div>
     <div class="column col-xs-12 col-md-3 col-md-offset-1">
-      <p class="mt8">It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24 hour awake staff, food, utlitities, phones, furniture, activities, etc.</p>
+      <p class="FundADay_FinancialCaseDesc">It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24 hour awake staff, food, utlitities, phones, furniture, activities, etc.</p>
       <!-- <p class="underlined"><a href="">See the cost breakdown</a></p> -->
     </div>
-    <div class="column col-xs-12 col-md-3 col-md-offset-2 first-md">
-      <!-- <p>It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24/7 live-in staff, food, utlitities, phones, furniture, activities, etc.</p>
-      <p class="underlined"><a href="">See the cost breakdown</a></p> -->
+    <div class="column col-xs-12 col-md-4 first-md">
+      <img class="FundADay_BigPhoto3" src="_img/slide3.jpg">
     </div>
   </div>
 </section>
