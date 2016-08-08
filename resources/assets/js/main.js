@@ -19,6 +19,7 @@ var changeMaterialHeader = function(header, date) {
   $('.ui-datepicker-material-day-num', header).text(dayNum);
 };
 
+
 $.datepicker._selectDateOverload = $.datepicker._selectDate;
 $.datepicker._selectDate = function(id, dateStr) {
   var target = $(id);
@@ -81,16 +82,16 @@ var today = month + "/" + day + "/" + year;
 // var today = "10/1/2016";
 
 if(dateCheck("1/1/1900","08/1/2016", today))
-  $(".WeNeedYourHelp").html("Next month, we open our Emergency Care Center and we need your help.");
+  $(".WeNeedYourHelp").html("Next month, we open our Emergency Receiving Center and we need your help.");
 
 if(dateCheck("8/1/2016","08/31/2016", today))
-  $(".WeNeedYourHelp").html("This month, we opened our Emergency Care Center and we need your help.");
+  $(".WeNeedYourHelp").html("This month, we opened our Emergency Receiving Center and we need your help.");
 
 if(dateCheck("8/31/16","9/30/2016", today))
-  $(".WeNeedYourHelp").html("Last month, we opened our Emergency Care Center and we need your help.");
+  $(".WeNeedYourHelp").html("Last month, we opened our Emergency Receiving Center and we need your help.");
 
 if(dateCheck("9/30/16","1/1/3000", today))
-  $(".WeNeedYourHelp").html("This August, we opened our Emergency Care Center and we need your help.");
+  $(".WeNeedYourHelp").html("This August, we opened our Emergency Receiving Center and we need your help.");
 
 function dateCheck(from,to,check) {
   var fDate,lDate,cDate;
