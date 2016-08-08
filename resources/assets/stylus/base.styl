@@ -43,26 +43,17 @@ body
 .column {
   position: relative;
 }
-
 .FundADay_Intro {
   padding: 0 unit2;
 }
-  
 @media laptop {
   .FundADay_Intro {
     min-height: 100vh;
     position: relative;
   }
 }
-// @media laptop {
-//   .FundADay_Intro .row {
-//     position: relative;
-//     top: 50%;
-//     transform: translateY(-50%);
-//   }
-// }
 .FundADay_Intro .column {
-  margin-top: 25vw;
+  margin-top: 15vw;
 }
 @media laptop {
   .FundADay_Intro .column {
@@ -70,23 +61,25 @@ body
   }
 }
 .FundADay_Intro h2 {
-    padding: 20vh 0;
+    padding: 10vh 0;
 }  
-// @media laptop {
-//   .FundADay_Intro h2 {
-//     padding: 0;
-//   }
-// }
-
+@media laptop {
+  .FundADay_Intro h2 {
+    padding: 15vh 0;
+  }
+}
 .FundADay_BigPhoto {
-  height: 80vh;
-  width: 100vw;
+  height: 90vw;
+  width: 90vw;
+  transform: rotate(-9deg);
+  position: relative;
+  right: -5vw;
+  margin-bottom: 10vw;
   background-size: cover;
   background-position: 20% center;
   background-image: url("../_img/blog_donatebg_desktop.jpg");
   background-repeat: no-repeat;
 }
-
 @media laptop {
   .FundADay_BigPhoto {
     position: absolute;
@@ -95,23 +88,36 @@ body
     height: 60vw;
     width: 55vw;
     transform: rotate(9deg);
+    margin-bottom: 0;
   }
 }
-
-
 .NegativeBlock, .NegativeBlock h1, .NegativeBlock h2, .NegativeBlock h3, .NegativeBlock p, .NegativeBlock a {
   color: color-white;
   border-color: color-white
 }
-
 .FundADay_WhatIsERC {
   padding: unit3 unit2 unit1 unit2 ;
 }
-
-
 @media laptop {
   .FundADay_WhatIsERC {
     padding: 7vw;
+  }
+}
+.FundADay_BigPhoto2 {
+  height: 90vw;
+  width: 90vw;
+  transform: rotate(9deg);
+  position: relative;
+  right: -5vw;
+  margin-top: 10vw;
+}
+@media laptop {
+  .FundADay_BigPhoto2 {
+    width: 35vw;
+    height: 35vw;
+    margin-top: -5vw;
+    transform: rotate(-9deg);
+    right: 0vw;
   }
 }
 .FundADay_FinancialCase {
@@ -138,6 +144,33 @@ body
   .FundADay_FinancialCase h2 {
     padding-bottom: 0px;
     margin-bottom: -.5em
+  }
+}
+.FundADay_FinancialCaseDesc {
+  margin-top: -2rem;
+}
+@media laptop {
+  .FundADay_FinancialCaseDesc {
+    margin-top: 0;
+  }
+}
+.FundADay_BigPhoto3 {
+  height: 90vw;
+  width: 90vw;
+  transform: rotate(-9deg);
+  position: relative;
+  left: -5vw;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+}
+@media laptop {
+  .FundADay_BigPhoto3 {
+    width: 30vw;
+    height: 40vw;
+    margin-top: -15vw;
+    transform: rotate(9deg);
+    left: -10vw;
+    margin-bottom: 0;
   }
 }
 .FundADay_WillYouBe {
