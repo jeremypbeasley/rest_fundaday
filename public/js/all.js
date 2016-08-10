@@ -6189,6 +6189,7 @@ function api_has_loaded(response){
 var DonateForm = {
   init:function(){
     $('#form-donate').validate({
+      errorElement:'div',
       invalidHandler: function(event, validator) {
         // 'this' refers to the form
         var errors = validator.numberOfInvalids();

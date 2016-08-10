@@ -3493,10 +3493,9 @@ input::-moz-focus-inner {
   cursor: text;
   z-index: 999;
 }
-.FormRow label.error {
-  left: 5px;
+.FormRow div.error {
   color: #dc4405;
-  font-size: 20px;
+  padding: 10px 10px 0;
 }
 .FormRow.active input {
   padding-left: 15px;
@@ -3505,9 +3504,6 @@ input::-moz-focus-inner {
   top: 11px;
   font-size: 11px;
   opacity: 0.4;
-}
-.FormRow.active label.error {
-  font-size: 16px;
 }
 .FundADay_FormSubmit {
   width: 100%;
