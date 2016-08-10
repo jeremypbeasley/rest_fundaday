@@ -6241,7 +6241,10 @@ var DonateForm = {
         // validation errors
         error = "All fields are required";
       }
-      $('#js-form-response').text(error).css('color','red');
+      if('message' in response.responseJSON){
+        error = response.responseJSON.message;
+      }
+      $('#js-form-response').text(error);
     });
   }
 };

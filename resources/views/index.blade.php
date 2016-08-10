@@ -99,7 +99,7 @@
           <div class="column col-xs-12">
             <div class="FormRow">
               <p class="mt1">Note: Once you submit, your card will be immediately charged for $1,500 USD, these funds will be used exclusively to fund the day you've chosen.</p>
-              <div id="js-form-response"></div>
+              <div id="js-form-response" class="form-error-color"></div>
             </div>
             <div class="FormRow">
               <button class="FundADay_FormSubmit" type="submit">

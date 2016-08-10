@@ -3500,6 +3500,9 @@ input::-moz-focus-inner {
 .FormRow.active input {
   padding-left: 15px;
 }
+.form-error-color {
+  color: #dc4405;
+}
 .FormRow.active label {
   top: 11px;
   font-size: 11px;
