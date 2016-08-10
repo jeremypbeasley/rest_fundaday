@@ -21,7 +21,7 @@
         <h2 class="SansSerif pb5 WeNeedYourHelp"></h2>
         <p>Last year, there were no beds available in King County for nearly 40% of women who contacted REST for a place to stay. </p>
         <p>The ERC will provide up to 7 girls 30 days of emergency housing, intensive case management, and daytime programming to help guests begin to stabilize and consider what life free from exploitation looks and feels like.</p>
-        <!-- <p class="underlined"><a href="">Learn more about the ERC</a></p> -->
+        <!-- <p class="underlined"><a onclick="ga('send', 'event', 'Learn more about ERC','click');" href="">Learn more about the ERC</a></p> -->
       </article>
     </div>
     <div class="column col-xs-12 col-md-5 col-md-offset-1">
@@ -42,7 +42,7 @@
     </div>
     <div class="column col-xs-12 col-md-3 col-md-offset-1">
       <p class="FundADay_FinancialCaseDesc">It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24 hour awake staff, food, utlitities, phones, furniture, activities, etc.</p>
-      <!-- <p class="underlined"><a href="">See the cost breakdown</a></p> -->
+      <!-- <p class="underlined"><a onclick="ga('send', 'event', 'See cost breakdown','click');" href="">See the cost breakdown</a></p> -->
     </div>
     <div class="column col-xs-12 col-md-4 first-md">
       <img class="FundADay_BigPhoto3" src="_img/slide3.jpg">
@@ -106,10 +106,10 @@
                 <div class="FormSubmitDefault">Give Now</div>
                 <div class="FormSubmitIsLoading">Submitting</div>
               </button>
-            </div><input name="is_anonymous" type="hidden" value="0"> 
+            </div>
             <label class="FormUICheckbox FormUICheckbox--checkbox mt4">
               I’d like my name not to be displayed publicly on this page. 
-              <input type="checkbox">
+              <input type="checkbox" name="is_anonymous" value="1" id="js-checkbox-is-anonymous">
               <div class="FormUICheckbox__indicator">
                 <label class="FormUICheckbox FormUICheckbox--checkbox mt4"></label>
               </div>
@@ -118,12 +118,12 @@
         </div>
       </div>
       <div class="column col-xs-12 col-md-4 col-md-offset-1 FundADay_Outro">
-        <a href="https://iwantrest.com/">
+        <a onclick="ga('send', 'event', 'Understand The Problem','click');" href="https://iwantrest.com/">
         <h3 class="Serif">Understand the problem in Seattle.</h3></a>
         <hr>
-        <a href="https://iwantrest.com/services">
+        <a onclick="ga('send', 'event', 'Learn more about what we do', 'click');" href="https://iwantrest.com/services">
         <h3 class="Serif">Learn more about what we do.</h3></a>
-        <p class="underlined">Learn more at <a href="https://iwantrest.com/">iwantrest.com</a>.</p>
+        <p class="underlined">Learn more at <a onclick="ga('send', 'event', 'Learn more at iwantrest', 'click');" href="https://iwantrest.com/">iwantrest.com</a>.</p>
       </div>
     </div>
   </section>

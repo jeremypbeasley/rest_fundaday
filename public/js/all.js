@@ -6159,10 +6159,14 @@ function api_has_loaded(response){
     dateFormat:'yy-mm-dd',
     minDate:'2016-10-01',
     maxDate:'2017-09-30',
+    onChangeMonthYear:function(){
+      ga('send','event','Calendar','changed-month');
+    },
     onSelect: function(dateText, obj){
       var date = $(this).val();
       $('#date-input').val(date); 
       displayChosenDay(date);
+      ga('send','event','Calendar','date-selected',date);
     }
   });
 
@@ -6185,6 +6189,21 @@ function api_has_loaded(response){
 var DonateForm = {
   init:function(){
     $('#form-donate').validate({
+      invalidHandler: function(event, validator) {
+        // 'this' refers to the form
+        var errors = validator.numberOfInvalids();
+        /*
+        if (errors) {
+          var message = errors == 1
+            ? 'You missed 1 field. It has been highlighted'
+            : 'You missed ' + errors + ' fields. They have been highlighted';
+          $("div.error span").html(message);
+          $("div.error").show();
+        } else {
+          $("div.error").hide();
+        }*/
+        ga('send','event','DonateForm','client-side-invalid','Validation',errors);
+      },
       submitHandler:function(f,e){
         DonateForm.submitForm(e);
       }
@@ -6194,14 +6213,20 @@ var DonateForm = {
   bindEvents:function(){
     $('#form-donate').on('blur','input',this.checkAutofill);
     $('#form-donate').on('change','input',this.checkAutofill);
+    $('#form-donate').on('change','#js-checkbox-is-anonymous',this.clickedAnonymous);
   },
   checkAutofill:function(){
     $('#form-donate').find(':-webkit-autofill').each(function(){
       $(this).closest('.FormRow').addClass('active');
     });
   },
+  clickedAnonymous:function(){
+    var event_name = $(this).is(':checked') ? 'checked' : 'unchecked';
+    ga('send','event','Hide my name checkbox',event_name);
+  },
   submitForm:function(e){
     e.preventDefault();
+    ga('send','event','Donate Form','valid-submission');
     var $form = $('#form-donate');
     $form.addClass('form-is-loading');
     var form_data = $form.serialize();
