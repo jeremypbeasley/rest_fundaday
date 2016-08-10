@@ -192,6 +192,16 @@ var DonateForm = {
         DonateForm.submitForm(e);
       }
     });
+    this.bindEvents();
+  },
+  bindEvents:function(){
+    $('#form-donate').on('blur','input',this.checkAutofill);
+    $('#form-donate').on('change','input',this.checkAutofill);
+  },
+  checkAutofill:function(){
+    $('#form-donate').find(':-webkit-autofill').each(function(){
+      $(this).closest('.FormRow').addClass('active');
+    });
   },
   submitForm:function(e){
     e.preventDefault();
