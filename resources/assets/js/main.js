@@ -81,16 +81,16 @@ var today = month + "/" + day + "/" + year;
 // test dates
 // var today = "10/1/2016";
 
-if(dateCheck("1/1/1900","08/1/2016", today))
+if(dateCheck("1/1/1900","10/1/2016", today))
   $(".WeNeedYourHelp").html("Next month, we open our Emergency Receiving Center and we need your help.");
 
-if(dateCheck("8/1/2016","08/31/2016", today))
+if(dateCheck("10/1/2016","10/31/2016", today))
   $(".WeNeedYourHelp").html("This month, we opened our Emergency Receiving Center and we need your help.");
 
-if(dateCheck("8/31/16","9/30/2016", today))
+if(dateCheck("10/31/16","11/30/2016", today))
   $(".WeNeedYourHelp").html("Last month, we opened our Emergency Receiving Center and we need your help.");
 
-if(dateCheck("9/30/16","1/1/3000", today))
+if(dateCheck("11/30/16","1/1/3000", today))
   $(".WeNeedYourHelp").html("This August, we opened our Emergency Receiving Center and we need your help.");
 
 function dateCheck(from,to,check) {
@@ -160,7 +160,8 @@ function api_has_loaded(response){
       return [is_selectable,"",donor_name];
     },
     dateFormat:'yy-mm-dd',
-    maxDate:'2017-07-31',
+    minDate:'2016-10-01',
+    maxDate:'2017-09-30',
     onSelect: function(dateText, obj){
       var date = $(this).val();
       $('#date-input').val(date); 
