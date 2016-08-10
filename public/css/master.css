@@ -3520,6 +3520,50 @@ input::-moz-focus-inner {
   text-align: center;
   cursor: pointer;
 }
+.FundADay_FormSubmit {
+  width: 100%;
+  background: #dc4405;
+  color: #fff;
+  font-family: CircularStdBook, CircularStdBold, sans-serif;
+  border: none;
+  border-radius: 0px;
+  padding: 1.4rem 1rem;
+  height: 4rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 200ms ease-out;
+  position: relative;
+  overflow: hidden;
+}
+.FundADay_FormSubmit div {
+  position: absolute;
+  top: -1.4rem;
+  width: 100%;
+  width: 6rem;
+  left: 50%;
+  margin-left: -3rem;
+  text-align: center;
+  transition: all 200ms ease-out;
+  opacity: 0;
+}
+.FundADay_FormSubmit .FormSubmitDefault {
+  top: 1.4rem;
+  opacity: 1;
+}
+.form-is-loading .FundADay_FormSubmit {
+  background: #000;
+  cursor: progress;
+}
+.form-is-loading .FundADay_FormSubmit .FormSubmitIsLoading {
+  top: 1.4rem;
+  opacity: 1;
+  animation: blinking 1000ms infinite;
+}
+.form-is-loading .FundADay_FormSubmit .FormSubmitDefault {
+  top: -1.4rem;
+  opacity: 0;
+}
 .FormUICheckbox {
   display: block;
   position: relative;
@@ -3597,6 +3641,20 @@ input::-moz-focus-inner {
 .FormUIExpYear {
   width: calc(50% - 11px);
   display: inline-block;
+}
+@keyframes blinking {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 @keyframes CheckboxBounce {
   0% {

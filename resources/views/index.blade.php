@@ -102,7 +102,10 @@
               <div id="js-form-response"></div>
             </div>
             <div class="FormRow">
-              <button class="FundADay_FormSubmit" type="submit">Give Now</button>
+              <button class="FundADay_FormSubmit" type="submit">
+                <div class="FormSubmitDefault">Give Now</div>
+                <div class="FormSubmitIsLoading">Submitting</div>
+              </button>
             </div><input name="is_anonymous" type="hidden" value="0"> 
             <label class="FormUICheckbox FormUICheckbox--checkbox mt4">
               I’d like my name not to be displayed publicly on this page. 
