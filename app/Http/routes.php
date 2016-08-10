@@ -47,7 +47,7 @@ Route::get('/thank-you/{encrypted}', function ($encrypted) {
 	$view = [];
 	$view['amount'] = $valid_test ? config('app.fund_a_day_amount') : $day->amount / 100; // get amount in dollars
 	$view['email'] = $valid_test ? 'test@iwantrest.com' : $day->donor_email;
-	$view['date'] = $valid_test ? '07/25/2016' : date('m/d/Y',strtotime($day->day));
+	$view['date'] = $valid_test ? 'July 25, 2016' : date('F j, Y',strtotime($day->day));
 
     return view('thank-you',$view);
 });
