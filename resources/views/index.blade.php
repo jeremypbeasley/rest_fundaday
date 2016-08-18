@@ -58,8 +58,8 @@
       </div>
       <div class="column col-xs-12 col-md-5 col-md-offset-2 DateDiv">
         <div class="ChosenDay pb1">
-          <div class="SansSerif DayDesc mt3 mr2 mb0 ml3">Next unfunded day:</div>
-          <div class="SansSerif ActualDay mt3 mr3 mb0"><span id="js-next-unfunded-date-formatted"></span></div>
+          <!-- <div class="SansSerif DayDesc mt3 mr2 mb0 ml3">Next unfunded day:</div> -->
+          <div class="SansSerif ActualDay ml3 mt3 mr3 mb0"><span id="js-next-unfunded-date-formatted"></span></div>
         </div>
         <input type="text" name="day" placeholder="00/00/0000" data-type="date" id="date-input" readonly/>
       </div>
