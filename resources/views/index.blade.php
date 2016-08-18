@@ -2,6 +2,10 @@
 
 <!-- END HEADER PARTIAL FILE -->
 
+<header>
+  <div class="Logo linked"><a href="/">...</a></div>
+</header>
+
 <section class="FundADay_Intro">
   <div class="row">
     <!-- <div class="BigPhoto Intro"></div> -->
