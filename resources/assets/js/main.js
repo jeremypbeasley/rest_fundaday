@@ -106,7 +106,7 @@ function dateCheck(from,to,check) {
 
 function displayChosenDay(chosenDay) {
   var chosenDate = moment(chosenDay,'YYYY-MM-DD');
-  var chosenDayMsg = '<div class="SansSerif DayDesc mt3 mr2 mb0 ml3">You’ve chosen:</div><div class="SansSerif ActualDay mt3 mr3 mb0">' + chosenDate.format('MMMM D, YYYY') + '</div>';
+  var chosenDayMsg = '<div class="SansSerif DayDesc ml3 mt3 mr3 mb0">You’ve chosen ' + chosenDate.format('MMMM D, YYYY') + '</div>';
   $(".ChosenDay").html(chosenDayMsg);
 }
 
@@ -178,7 +178,7 @@ function api_has_loaded(response){
     // get the date from the api response and translate it into moment object
     var next_unfunded_date = moment(response.next_unfunded_date,'YYYY-MM-DD');
     // set the formatted text string like July 25, 2016
-    $('#js-next-unfunded-date-formatted').text(next_unfunded_date.format('MMMM D, YYYY'));
+    $('#js-next-unfunded-date-formatted').text("The next unfunded day is " + next_unfunded_date.format('MMMM D, YYYY'));
     // Set the datepicker date
     $('.DateDiv').datepicker('setDate',next_unfunded_date.format('YYYY-MM-DD'));
     // Set the input
