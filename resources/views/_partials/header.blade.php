@@ -19,8 +19,5 @@
   ga('send', 'pageview');
 </script>
 
-<header>
-  <div class="Logo linked"><a href="/">...</a></div>
-</header>
 
-<div class="GuideGuide"></div>
+
