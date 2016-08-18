@@ -94,6 +94,8 @@
   color: white;
   //border-bottom: 1px solid hsla(255,100%,100%,.3)
 }
+
+
 .ui-datepicker-header .ui-datepicker-prev,
 .ui-datepicker-header .ui-datepicker-next,
 .ui-datepicker-header .ui-datepicker-title {
@@ -110,6 +112,9 @@
   background: #b4cbe5;
 }
 
+.ui-datepicker-header .ui-datepicker-prev.ui-corner-all.ui-state-disabled, .ui-datepicker-header .ui-datepicker-next.ui-corner-all.ui-state-disabled {
+  display: none;
+}
 
 
 
@@ -387,7 +392,13 @@ input[type='text'] {
 
 .FormRow div.error{
   color: color-red;
-  padding:10px 10px 0;
+  padding: 10px 10px 10px 0;
+  font-family: CircularStdBook;
+}
+.FormRow div.error:before{
+  content: "×";
+  color: color-red;
+  margin-right: 5px;
 }
 
 .FormRow.active input {

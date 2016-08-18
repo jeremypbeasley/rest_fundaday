@@ -72,28 +72,28 @@
           <div class="column col-xs-12 col-md-6">
             <label class="DateLabel">Personal Information</label>
             <div class="FormRow">
-              <label for="input-first-name">First Name</label> <input class="FormUIInputText" id="input-first-name" name="first_name" required data-msg="Please enter your first name" type="text">
+              <label for="input-first-name">First Name</label> <input class="FormUIInputText" id="input-first-name" name="first_name" required data-msg="Please enter a valid first name." type="text">
             </div>
             <div class="FormRow">
-              <label for="input-last-name">Last Name</label> <input class="FormUIInputText" id="input-last-name" name="last_name" required data-msg="Please enter your last name" type="text">
+              <label for="input-last-name">Last Name</label> <input class="FormUIInputText" id="input-last-name" name="last_name" required data-msg="Please enter a valid last name." type="text">
             </div>
             <div class="FormRow">
-              <label for="input-email">Email Address</label> <input class="FormUIInputText" id="input-email" name="email" required data-msg="Please enter your email" type="email">
+              <label for="input-email">Email Address</label> <input class="FormUIInputText" id="input-email" name="email" required data-msg="Please enter a valid email." type="email">
             </div>
           </div>
           <div class="column col-xs-12 col-md-6">
             <label class="DateLabel">Payment</label>
             <div class="FormRow">
-              <label for="input-ccnumber">Credit Card #</label> <input class="FormUIInputText" id="input-ccnumber" name="cc_number" required data-msg="Please enter your card number" type="tel">
+              <label for="input-ccnumber">Credit Card #</label> <input class="FormUIInputText" id="input-ccnumber" name="cc_number" required data-msg="Please enter a valid card." type="tel">
             </div>
             <div class="FormRow FormUIExpMonth">
-              <label for="input-ccexpmonth">Exp. Month</label> <input class="FormUIInputText" id="input-ccexpmonth" name="cc_exp_month" required data-msg="Please enter the month" type="tel">
+              <label for="input-ccexpmonth">Exp. Month</label> <input class="FormUIInputText" id="input-ccexpmonth" name="cc_exp_month" required data-msg="Please enter a valid month." type="tel">
             </div>
             <div class="FormRow FormUIExpYear">
-              <label for="expyear">Exp. Year</label> <input class="FormUIInputText" id="expyear" name="cc_exp_year" required data-msg="Please enter the year" type="tel">
+              <label for="expyear">Exp. Year</label> <input class="FormUIInputText" id="expyear" name="cc_exp_year" required data-msg="Please a valid year." type="tel">
             </div>
             <div class="FormRow">
-              <label for="input-cvc">CVV (Security Code)</label> <input class="FormUIInputText" id="input-cvc" name="cvc" required data-msg="Please enter the CVV" type="tel">
+              <label for="input-cvc">CVV (Security Code)</label> <input class="FormUIInputText" id="input-cvc" name="cvc" required data-msg="Please a valid CVV." type="tel">
             </div>
           </div>
           <div class="column col-xs-12">
