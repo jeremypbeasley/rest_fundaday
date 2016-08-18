@@ -3138,8 +3138,13 @@ body {
   }
 }
 .FundADay_Outro {
-  padding: 80px 40px;
+  padding: 80px 24px;
   text-align: center;
+}
+@media (min-width: 48em) {
+  .FundADay_Outro {
+    padding: 80px 40px;
+  }
 }
 .FundADay_Outro hr {
   width: 50%;
@@ -3283,6 +3288,10 @@ body {
   border: none;
   outline: none;
   background: #b4cbe5;
+}
+.ui-datepicker-header .ui-datepicker-prev.ui-corner-all.ui-state-disabled,
+.ui-datepicker-header .ui-datepicker-next.ui-corner-all.ui-state-disabled {
+  display: none;
 }
 .ui-icon-circle-triangle-w {
   border-radius: 100%;
@@ -3495,7 +3504,13 @@ input::-moz-focus-inner {
 }
 .FormRow div.error {
   color: #dc4405;
-  padding: 10px 10px 0;
+  padding: 10px 10px 10px 0;
+  font-family: CircularStdBook;
+}
+.FormRow div.error:before {
+  content: "×";
+  color: #dc4405;
+  margin-right: 5px;
 }
 .FormRow.active input {
   padding-left: 15px;
