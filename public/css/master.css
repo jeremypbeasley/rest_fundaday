@@ -3516,7 +3516,13 @@ input::-moz-focus-inner {
   padding-left: 15px;
 }
 .form-error-color {
+  font-family: CircularStdBook;
   color: #dc4405;
+}
+.form-error-color:before {
+  content: "×";
+  color: #dc4405;
+  margin-right: 5px;
 }
 .FormRow.active label {
   top: 11px;
