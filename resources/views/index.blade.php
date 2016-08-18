@@ -11,7 +11,7 @@
     <!-- <div class="BigPhoto Intro"></div> -->
     <div class="column col-xs-12 col-md-5 col-md-offset-7">
       <article class="CenterBlock">
-        <h2 class="Serif">Seattle needs a safe place where a young woman can escape a life that abuses and exploits her.</h2>
+        <h2 class="Serif">Seattle needs a safe place where a young woman can immediately escape a life that abuses and exploits her.</h2>
       </article>
     </div>
   </div>
@@ -22,7 +22,7 @@
   <div class="row">
     <div class="column col-xs-12 col-md-6">
       <article class="CenterBlock">
-        <h2 class="SansSerif pb5 WeNeedYourHelp"></h2>
+        <h2 class="SansSerif pb5 WeNeedYourHelp">We need your help to open our Emergency Receiving Center.</h2>
         <p>Last year, there were no beds available in King County for nearly 40% of women who contacted REST for a place to stay. </p>
         <p>The ERC will provide up to 7 girls 30 days of emergency housing, intensive case management, and daytime programming to help guests begin to stabilize and consider what life free from exploitation looks and feels like.</p>
         <!-- <p class="underlined"><a onclick="ga('send', 'event', 'Learn more about ERC','click');" href="">Learn more about the ERC</a></p> -->

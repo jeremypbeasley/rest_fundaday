@@ -73,36 +73,34 @@ $.extend($.datepicker, { _checkOffset: function(inst, offset, isFixed) { return 
 
 // DYNAMIC HEADLINE:
 
-var currentTime = new Date();
-var month = currentTime.getMonth() + 1;
-var day = currentTime.getDate();
-var year = currentTime.getFullYear();
-var today = month + "/" + day + "/" + year;
-// test dates
-// var today = "10/1/2016";
+// var currentTime = new Date();
+// var month = currentTime.getMonth() + 1;
+// var day = currentTime.getDate();
+// var year = currentTime.getFullYear();
+// var today = month + "/" + day + "/" + year;
 
-if(dateCheck("1/1/1900","10/1/2016", today))
-  $(".WeNeedYourHelp").html("Next month, we open our Emergency Receiving Center and we need your help.");
+// if(dateCheck("1/1/1900","10/1/2016", today))
+//   $(".WeNeedYourHelp").html("Next month, we open our Emergency Receiving Center and we need your help.");
 
-if(dateCheck("10/1/2016","10/31/2016", today))
-  $(".WeNeedYourHelp").html("This month, we opened our Emergency Receiving Center and we need your help.");
+// if(dateCheck("10/1/2016","10/31/2016", today))
+//   $(".WeNeedYourHelp").html("This month, we opened our Emergency Receiving Center and we need your help.");
 
-if(dateCheck("10/31/16","11/30/2016", today))
-  $(".WeNeedYourHelp").html("Last month, we opened our Emergency Receiving Center and we need your help.");
+// if(dateCheck("10/31/16","11/30/2016", today))
+//   $(".WeNeedYourHelp").html("Last month, we opened our Emergency Receiving Center and we need your help.");
 
-if(dateCheck("11/30/16","1/1/3000", today))
-  $(".WeNeedYourHelp").html("This August, we opened our Emergency Receiving Center and we need your help.");
+// if(dateCheck("11/30/16","1/1/3000", today))
+//   $(".WeNeedYourHelp").html("This August, we opened our Emergency Receiving Center and we need your help.");
 
-function dateCheck(from,to,check) {
-  var fDate,lDate,cDate;
-  fDate = Date.parse(from);
-  lDate = Date.parse(to);
-  cDate = Date.parse(check);
-  if((cDate <= lDate && cDate >= fDate)) {
-      return true;
-  }
-  return false;
-}
+// function dateCheck(from,to,check) {
+//   var fDate,lDate,cDate;
+//   fDate = Date.parse(from);
+//   lDate = Date.parse(to);
+//   cDate = Date.parse(check);
+//   if((cDate <= lDate && cDate >= fDate)) {
+//       return true;
+//   }
+//   return false;
+// }
 
 function displayChosenDay(chosenDay) {
   var chosenDate = moment(chosenDay,'YYYY-MM-DD');
