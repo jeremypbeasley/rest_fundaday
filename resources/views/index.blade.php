@@ -20,21 +20,27 @@
 </section>
 <section class="FundADay_WhatIsERC">
   <div class="row">
-    <div class="column col-xs-12 col-md-6">
+    <div class="column col-xs-12 col-md-6 col-md-offset-0">
       <h2 class="SansSerif pb5 WeNeedYourHelp">We need your help to open our Emergency Receiving Center.</h2>
       <p>Last year, there were no beds available in King County for nearly 40% of women who contacted REST for a place to stay. </p>
       <p>The ERC will provide more than 2,500 nights of emergency shelter for survivors of sex trafficking and those seeking escape from the sex trade. Imagine when our 24-hour hotline rings with someone looking to escape a violent trafficker, having them hear, “There is a safe place for you to go tonight, and a team of people dedicated to helping you.” Imagine the impact of increased coordination between social service agencies and local police who have an immediate place to bring victims of human trafficking when rescued.</p>
+      <h3 class="mb5 mt5">For $1,500, you can fund the new ERC for an entire day.</h3> 
+      <p>It’s an expensive operation but a worthwhile one. Your generous donation will cover the daily operations cost: rent & utilities, 24/7 awake staff, daytime programming, case management, basic needs, etc.</p>
       <!-- <p class="underlined"><a onclick="ga('send', 'event', 'Learn more about ERC','click');" href="">Learn more about the ERC</a></p> -->
     </div>
     <div class="column col-xs-12 col-md-5 col-md-offset-1">
-      <h2 class="Serif pb5">For $1,500, you can fund the new ERC for an entire day.</h2>
-      <p class="FundADay_FinancialCaseDesc"> It’s an expensive operation but a worthwhile one. Your generous donation will cover the daily operations cost: rent & utilities, 24/7 awake staff, daytime programming, case management, basic needs, etc.</p>
-      <!-- <p class="underlined"><a onclick="ga('send', 'event', 'See cost breakdown','click');" href="">See the cost breakdown</a></p> -->
+      <p><img class="BigChart" src="_img/chart2.svg"></p>
     </div>
-    <!-- <div class="column col-xs-12 col-md-5 col-md-offset-1">
-      <img class="FundADay_BigPhoto2" src="_img/slide4.jpg">
-    </div> -->
   </div>
+  <!-- <div class="row">
+    <div class="column col-xs-12 col-md-4">
+     <h2 class="Serif pb5">For $1,500, you can fund the new ERC for an entire day.</h2>
+      <p>It’s an expensive operation but a worthwhile one. Your generous donation will cover the daily operations cost: rent & utilities, 24/7 awake staff, daytime programming, case management, basic needs, etc.</p> 
+      </div>
+    <div class="column col-xs-12 col-md-4">
+      <p><img class="BigChart" src="_img/chart2.svg"></p>
+    </div>
+  </div> -->
 </section>
 <form id="form-donate">
   <section class="FundADay_WillYouBe NegativeBlock ">
