@@ -172,16 +172,16 @@ function api_has_loaded(response){
   });
 
   // Set the next unfunded date
-  if(response.next_unfunded_date){
-    // get the date from the api response and translate it into moment object
-    var next_unfunded_date = moment(response.next_unfunded_date,'YYYY-MM-DD');
-    // set the formatted text string like July 25, 2016
-    $('#js-next-unfunded-date-formatted').text("The next unfunded day is " + next_unfunded_date.format('MMMM D, YYYY'));
-    // Set the datepicker date
-    $('.DateDiv').datepicker('setDate',next_unfunded_date.format('YYYY-MM-DD'));
-    // Set the input
-    $('#date-input').val(next_unfunded_date.format('YYYY-MM-DD'));
-  }
+  // if(response.next_unfunded_date){
+  //   // get the date from the api response and translate it into moment object
+  //   var next_unfunded_date = moment(response.next_unfunded_date,'YYYY-MM-DD');
+  //   // set the formatted text string like July 25, 2016
+  //   $('#js-next-unfunded-date-formatted').text("The next unfunded day is " + next_unfunded_date.format('MMMM D, YYYY'));
+  //   // Set the datepicker date
+  //   $('.DateDiv').datepicker('setDate',next_unfunded_date.format('YYYY-MM-DD'));
+  //   // Set the input
+  //   $('#date-input').val(next_unfunded_date.format('YYYY-MM-DD'));
+  // }
 
 
 }

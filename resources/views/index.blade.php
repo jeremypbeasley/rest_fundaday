@@ -21,36 +21,19 @@
 <section class="FundADay_WhatIsERC">
   <div class="row">
     <div class="column col-xs-12 col-md-6">
-      <article class="CenterBlock">
-        <h2 class="SansSerif pb5 WeNeedYourHelp">We need your help to open our Emergency Receiving Center.</h2>
-        <p>Last year, there were no beds available in King County for nearly 40% of women who contacted REST for a place to stay. </p>
-        <p>The ERC will provide up to 7 girls 30 days of emergency housing, intensive case management, and daytime programming to help guests begin to stabilize and consider what life free from exploitation looks and feels like.</p>
-        <!-- <p class="underlined"><a onclick="ga('send', 'event', 'Learn more about ERC','click');" href="">Learn more about the ERC</a></p> -->
-      </article>
+      <h2 class="SansSerif pb5 WeNeedYourHelp">We need your help to open our Emergency Receiving Center.</h2>
+      <p>Last year, there were no beds available in King County for nearly 40% of women who contacted REST for a place to stay. </p>
+      <p>The ERC will provide up to 7 girls 30 days of emergency housing, intensive case management, and daytime programming to help guests begin to stabilize and consider what life free from exploitation looks and feels like.</p>
+      <!-- <p class="underlined"><a onclick="ga('send', 'event', 'Learn more about ERC','click');" href="">Learn more about the ERC</a></p> -->
     </div>
     <div class="column col-xs-12 col-md-5 col-md-offset-1">
-      <img class="FundADay_BigPhoto2" src="_img/slide4.jpg">
-    </div>
-  </div>
-</section>
-<!-- <section class="ERCGallerySmall">
-  <div><img src="_img/slide4.jpg"></div>
-  <div><img src="_img/slide3.jpg"></div>
-  <div><img src="_img/slide2.jpg"></div>
-  <div><img src="_img/slide1.jpg"></div>
-</section > -->
-<section class="FundADay_FinancialCase  ">
-  <div class="row">
-    <div class="column col-xs-12 col-md-4">
       <h2 class="Serif pb5">For $1,500, you can fund the new ERC for an entire day.</h2>
-    </div>
-    <div class="column col-xs-12 col-md-3 col-md-offset-1">
       <p class="FundADay_FinancialCaseDesc">It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24 hour awake staff, food, utlitities, phones, furniture, activities, etc.</p>
       <!-- <p class="underlined"><a onclick="ga('send', 'event', 'See cost breakdown','click');" href="">See the cost breakdown</a></p> -->
     </div>
-    <div class="column col-xs-12 col-md-4 first-md">
-      <img class="FundADay_BigPhoto3" src="_img/slide3.jpg">
-    </div>
+    <!-- <div class="column col-xs-12 col-md-5 col-md-offset-1">
+      <img class="FundADay_BigPhoto2" src="_img/slide4.jpg">
+    </div> -->
   </div>
 </section>
 <form id="form-donate">
@@ -112,7 +95,7 @@
               </button>
             </div>
             <label class="FormUICheckbox FormUICheckbox--checkbox mt4">
-              I’d like my name not to be displayed publicly on this page. 
+              I prefer not to have any public credit for my funding a day.
               <input type="checkbox" name="is_anonymous" value="1" id="js-checkbox-is-anonymous">
               <div class="FormUICheckbox__indicator">
                 <label class="FormUICheckbox FormUICheckbox--checkbox mt4"></label>
