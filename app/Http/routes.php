@@ -60,3 +60,16 @@ Route::group(['prefix' => 'api'], function () {
     	'as' => 'api.days.create', 'uses' => 'Api\DayController@create'
 	]);
 });
+
+Route::get('admin/login', [
+	'as' => 'admin.login', 'uses' => 'Admin\DayController@login'
+]);
+Route::post('admin/login', [
+	'as' => 'admin.login.post', 'uses' => 'Admin\DayController@postLogin'
+]);
+Route::group(['prefix' => 'admin','middleware'=>'admin'], function () {
+	Route::get('/', function () {
+    	return redirect()->route('admin.days.index');
+	});
+    Route::resource('days', 'Admin\DayController');
+});
