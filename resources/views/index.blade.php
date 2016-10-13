@@ -11,7 +11,7 @@
     <!-- <div class="BigPhoto Intro"></div> -->
     <div class="column col-xs-12 col-md-5 col-md-offset-7">
       <article class="CenterBlock">
-        <h2 class="Serif">Seattle needs a safe place where a young woman can immediately escape a life that abuses and exploits her.</h2>
+        <h2 class="Serif">Seattle needs a safe place where a young woman can escape a life of exploitation.</h2>
       </article>
     </div>
   </div>
@@ -23,12 +23,12 @@
     <div class="column col-xs-12 col-md-6">
       <h2 class="SansSerif pb5 WeNeedYourHelp">We need your help to open our Emergency Receiving Center.</h2>
       <p>Last year, there were no beds available in King County for nearly 40% of women who contacted REST for a place to stay. </p>
-      <p>The ERC will provide up to 7 girls 30 days of emergency housing, intensive case management, and daytime programming to help guests begin to stabilize and consider what life free from exploitation looks and feels like.</p>
+      <p>The ERC will provide more than 2,500 nights of emergency shelter for survivors of sex trafficking and those seeking escape from the sex trade. Imagine when our 24-hour hotline rings with someone looking to escape a violent trafficker, having them hear, “There is a safe place for you to go tonight, and a team of people dedicated to helping you.” Imagine the impact of increased coordination between social service agencies and local police who have an immediate place to bring victims of human trafficking when rescued.</p>
       <!-- <p class="underlined"><a onclick="ga('send', 'event', 'Learn more about ERC','click');" href="">Learn more about the ERC</a></p> -->
     </div>
     <div class="column col-xs-12 col-md-5 col-md-offset-1">
       <h2 class="Serif pb5">For $1,500, you can fund the new ERC for an entire day.</h2>
-      <p class="FundADay_FinancialCaseDesc">It’s an expensive operation but a worthwhile one.  Your generous donation will cover the daily cost of rent, 24 hour awake staff, food, utlitities, phones, furniture, activities, etc.</p>
+      <p class="FundADay_FinancialCaseDesc"> It’s an expensive operation but a worthwhile one. Your generous donation will cover the daily operations cost: rent & utilities, 24/7 awake staff, daytime programming, case management, basic needs, etc.</p>
       <!-- <p class="underlined"><a onclick="ga('send', 'event', 'See cost breakdown','click');" href="">See the cost breakdown</a></p> -->
     </div>
     <!-- <div class="column col-xs-12 col-md-5 col-md-offset-1">
