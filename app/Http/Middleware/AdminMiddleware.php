@@ -16,7 +16,10 @@ class AdminMiddleware {
 		$user = Session::get('rest-admin-user','nope');
 		$pass = Session::get('rest-admin-pass','nope');
 
-		if($user != 'restfad' || $pass != 'RESTadmin16!'){
+		$admin_user = env('ADMIN_USER');
+		$admin_pass = env('ADMIN_PASS');
+
+		if($user != $admin_user || $pass != $admin_pass){
 			return redirect()->route('admin.login')->with('admin-error','Please login.');
 		}
 		return $next($request);
