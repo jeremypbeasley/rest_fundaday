@@ -158,7 +158,7 @@ function api_has_loaded(response){
       return [is_selectable,"",donor_name];
     },
     dateFormat:'yy-mm-dd',
-    minDate:'2016-10-01',
+    minDate:'2016-11-03',
     maxDate:'2017-09-30',
     onChangeMonthYear:function(){
       ga('send','event','Calendar','changed-month');
